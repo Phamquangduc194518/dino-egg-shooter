@@ -1,0 +1,195 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Screen1",
+        "Components": [
+          {
+            "Type": "TiledImage",
+            "Name": "BackGround",
+            "Width": 241,
+            "Height": 320,
+            "FileName": "__generated\\alternate_theme_images_backgrounds_240x240_gradient_light.png"
+          },
+          {
+            "Type": "Container",
+            "Name": "Box",
+            "Width": 250,
+            "Height": 250,
+            "Components": [
+              {
+                "Type": "ScalableImage",
+                "Name": "Celling",
+                "X": -9,
+                "Y": -7,
+                "Width": 258,
+                "Height": 18,
+                "Filename": "__generated\\alternate_theme_images_backgrounds_240x240_gradient_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "R_Wall",
+                "X": 230,
+                "Y": 10,
+                "Width": 15,
+                "Height": 276,
+                "Filename": "__generated\\alternate_theme_images_backgrounds_240x240_gradient_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              },
+              {
+                "Type": "ScalableImage",
+                "Name": "L_Wall",
+                "X": -5,
+                "Y": 9,
+                "Width": 15,
+                "Height": 276,
+                "Filename": "__generated\\alternate_theme_images_backgrounds_240x240_gradient_dark.png",
+                "ScalingAlgorithm": "Nearest-neighbor"
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "Hitter",
+            "Width": 240,
+            "Height": 320,
+            "Components": [
+              {
+                "Type": "Image",
+                "Name": "currentEgg",
+                "X": 110,
+                "Y": 288,
+                "Width": 20,
+                "Height": 20,
+                "RelativeFilename": "Green-removebg-preview.png"
+              },
+              {
+                "Type": "TextureMapper",
+                "Name": "EggDirection",
+                "X": 100,
+                "Y": 276,
+                "Width": 40,
+                "Height": 44,
+                "RenderingAlgorithm": "Nearest-neighbor",
+                "FileNameImage": "__generated\\alternate_theme_images_widgets_gauge_large_needles_rough.png",
+                "XBitmapPosition": 5.0,
+                "YBitmapPosition": -70.0,
+                "ZAngle": 6.28,
+                "Scale": 0.2,
+                "XOrigo": 20.0,
+                "YOrigo": 22.0,
+                "ZOrigo": 1000.0,
+                "CameraDistance": 1000.0
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "Dumper",
+            "Width": 241,
+            "Height": 320,
+            "Components": [
+              {
+                "Type": "Image",
+                "Name": "YellowEgg",
+                "X": -29,
+                "Y": 29,
+                "Width": 20,
+                "Height": 20,
+                "RelativeFilename": "Yellow-removebg-preview.png"
+              },
+              {
+                "Type": "Image",
+                "Name": "GreenEgg",
+                "X": -29,
+                "Y": 9,
+                "Width": 20,
+                "Height": 20,
+                "RelativeFilename": "Green-removebg-preview.png"
+              },
+              {
+                "Type": "Image",
+                "Name": "RedEgg",
+                "X": -29,
+                "Y": -9,
+                "Width": 20,
+                "Height": 20,
+                "RelativeFilename": "Red-removebg-preview.png"
+              },
+              {
+                "Type": "Image",
+                "Name": "TestingEgg",
+                "X": -29,
+                "Y": 49,
+                "Width": 20,
+                "Height": 20,
+                "RelativeFilename": "Red-removebg-preview.png"
+              }
+            ]
+          }
+        ],
+        "Interactions": []
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "MyApplication",
+    "Resolution": {
+      "Width": 240,
+      "Height": 320
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 240,
+        "Height": 320
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Portrait",
+    "Family": "STM32F4",
+    "SubFamily": "STM32F429/439",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m4",
+    "ProjectFile": "../STM32F429I_DISCO_REV_D01.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "CWRVector",
+      "VectorFonts"
+    ]
+  },
+  "Version": "4.25.0",
+  "CreatedBy": "4.25.0"
+}
