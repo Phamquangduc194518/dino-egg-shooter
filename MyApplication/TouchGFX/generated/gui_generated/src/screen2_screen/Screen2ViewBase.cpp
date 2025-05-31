@@ -43,6 +43,10 @@ void Screen2ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //Interaction1
         //When buttonWithLabel1 clicked call virtual function
         //Call startGameClicked
-        startGameClicked();
+        startGameClicked();
+        //Interaction2
+        //When buttonWithLabel1 clicked change screen to Screen1
+        //Go to Screen1 with screen transition towards West
+        application().gotoScreen1ScreenSlideTransitionWest();
     }
 }

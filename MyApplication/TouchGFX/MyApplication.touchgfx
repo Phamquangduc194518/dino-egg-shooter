@@ -2,6 +2,67 @@
   "Application": {
     "Screens": [
       {
+        "Name": "Screen2",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 240,
+            "Height": 360,
+            "RelativeFilename": "start_game_touchGFX.png"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1",
+            "X": 33,
+            "Y": 103,
+            "Width": 175,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_action.png",
+            "TextId": "__SingleUse_VQ74",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 245,
+              "Green": 245,
+              "Blue": 245
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\small_round_action.json"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabel1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "startGameClicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabel1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Screen1"
+            }
+          }
+        ]
+      },
+      {
         "Name": "Screen1",
         "Components": [
           {
@@ -61,6 +122,7 @@
               {
                 "Type": "TextureMapper",
                 "Name": "EggDirection",
+                "X": 1,
                 "Width": 240,
                 "Height": 592,
                 "RenderingAlgorithm": "Nearest-neighbor",
@@ -79,7 +141,7 @@
               {
                 "Type": "Image",
                 "Name": "currentEgg",
-                "X": 110,
+                "X": 111,
                 "Y": 286,
                 "Width": 20,
                 "Height": 20,
@@ -136,11 +198,10 @@
           {
             "Type": "Image",
             "Name": "image1",
-            "X": -1,
+            "X": 1,
             "Y": 249,
             "Width": 48,
             "Height": 72,
-            "LockPosition": true,
             "RelativeFilename": "egg_purple.png"
           }
         ],
@@ -182,54 +243,6 @@
           }
         ],
         "Interactions": []
-      },
-      {
-        "Name": "Screen2",
-        "Components": [
-          {
-            "Type": "Image",
-            "Name": "image1",
-            "Width": 240,
-            "Height": 360,
-            "RelativeFilename": "start_game_touchGFX.png"
-          },
-          {
-            "Type": "ButtonWithLabel",
-            "Name": "buttonWithLabel1",
-            "X": 33,
-            "Y": 103,
-            "Width": 175,
-            "Height": 50,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_pressed.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_action.png",
-            "TextId": "__SingleUse_VQ74",
-            "ReleasedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "PressedColor": {
-              "Red": 245,
-              "Green": 245,
-              "Blue": 245
-            },
-            "TextRotation": "0",
-            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\small_round_action.json"
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "Interaction1",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonWithLabel1"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "startGameClicked"
-            }
-          }
-        ]
       }
     ],
     "CustomContainerDefinitions": [],
@@ -239,7 +252,7 @@
       "Height": 320
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "Screen1",
+    "StartupScreenName": "Screen2",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

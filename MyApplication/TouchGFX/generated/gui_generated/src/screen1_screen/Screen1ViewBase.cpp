@@ -35,7 +35,7 @@ Screen1ViewBase::Screen1ViewBase()
     add(Box);
 
     Hitter.setPosition(0, 0, 240, 320);
-    EggDirection.setXY(0, 0);
+    EggDirection.setXY(1, 0);
     EggDirection.setBitmap(touchgfx::Bitmap(BITMAP_ABC_ID));
     EggDirection.setWidth(240);
     EggDirection.setHeight(592);
@@ -48,7 +48,7 @@ Screen1ViewBase::Screen1ViewBase()
     EggDirection.setRenderingAlgorithm(touchgfx::TextureMapper::NEAREST_NEIGHBOR);
     Hitter.add(EggDirection);
 
-    currentEgg.setXY(110, 286);
+    currentEgg.setXY(111, 286);
     currentEgg.setBitmap(touchgfx::Bitmap(BITMAP_GREEN_REMOVEBG_PREVIEW_ID));
     Hitter.add(currentEgg);
 
@@ -73,7 +73,7 @@ Screen1ViewBase::Screen1ViewBase()
 
     add(Dumper);
 
-    image1.setXY(-1, 249);
+    image1.setXY(1, 249);
     image1.setBitmap(touchgfx::Bitmap(BITMAP_EGG_PURPLE_ID));
     add(image1);
 }
