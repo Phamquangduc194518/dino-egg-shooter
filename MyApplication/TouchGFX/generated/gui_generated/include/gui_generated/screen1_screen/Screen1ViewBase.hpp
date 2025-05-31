@@ -43,6 +43,7 @@ protected:
     touchgfx::Image GreenEgg;
     touchgfx::Image RedEgg;
     touchgfx::Image TestingEgg;
+    touchgfx::Image image1;
 
 private:
 

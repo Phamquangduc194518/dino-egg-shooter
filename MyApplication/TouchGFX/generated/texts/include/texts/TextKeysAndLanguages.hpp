@@ -12,6 +12,8 @@ enum LANGUAGES
 
 enum TEXTS
 {
+    T___SINGLEUSE_QTYS,
+    T___SINGLEUSE_VQ74,
     NUMBER_OF_TEXT_KEYS
 };
 
