@@ -11,7 +11,7 @@ Screen1ViewBase::Screen1ViewBase()
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    BackGround.setBitmap(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_BACKGROUNDS_240X240_GRADIENT_LIGHT_ID));
+    BackGround.setBitmap(touchgfx::Bitmap(BITMAP_EGG_BACKGROUND_ID));
     BackGround.setPosition(0, 0, 241, 320);
     BackGround.setOffset(0, 0);
     add(BackGround);
@@ -54,7 +54,7 @@ Screen1ViewBase::Screen1ViewBase()
 
     add(Hitter);
 
-    Dumper.setPosition(0, 0, 241, 320);
+    Dumper.setPosition(250, 36, 241, 320);
     YellowEgg.setXY(-29, 29);
     YellowEgg.setBitmap(touchgfx::Bitmap(BITMAP_YELLOW_REMOVEBG_PREVIEW_ID));
     Dumper.add(YellowEgg);
@@ -72,6 +72,10 @@ Screen1ViewBase::Screen1ViewBase()
     Dumper.add(TestingEgg);
 
     add(Dumper);
+
+    image1.setXY(96, 9);
+    image1.setBitmap(touchgfx::Bitmap(BITMAP_EGG_PURPLE_ID));
+    add(image1);
 }
 
 Screen1ViewBase::~Screen1ViewBase()
