@@ -9,13 +9,15 @@
             "Name": "BackGround",
             "Width": 241,
             "Height": 320,
+            "LockPosition": true,
             "FileName": "egg_background.png"
           },
           {
             "Type": "Container",
             "Name": "Box",
-            "Width": 250,
+            "Width": 240,
             "Height": 250,
+            "LockPosition": true,
             "Components": [
               {
                 "Type": "ScalableImage",
@@ -54,43 +56,44 @@
             "Name": "Hitter",
             "Width": 240,
             "Height": 320,
+            "LockPosition": true,
             "Components": [
+              {
+                "Type": "TextureMapper",
+                "Name": "EggDirection",
+                "Width": 240,
+                "Height": 592,
+                "RenderingAlgorithm": "Nearest-neighbor",
+                "FileNameImage": "abc.png",
+                "LockBitmapToCenter": true,
+                "XBitmapPosition": 117.5,
+                "YBitmapPosition": 183.5,
+                "ZAngle": 6.283,
+                "Scale": 2.5,
+                "LockOrigoToCenter": true,
+                "XOrigo": 120.0,
+                "YOrigo": 296.0,
+                "ZOrigo": 1000.0,
+                "CameraDistance": 1000.0
+              },
               {
                 "Type": "Image",
                 "Name": "currentEgg",
                 "X": 110,
-                "Y": 288,
+                "Y": 286,
                 "Width": 20,
                 "Height": 20,
                 "RelativeFilename": "Green-removebg-preview.png"
-              },
-              {
-                "Type": "TextureMapper",
-                "Name": "EggDirection",
-                "X": 100,
-                "Y": 276,
-                "Width": 40,
-                "Height": 44,
-                "RenderingAlgorithm": "Nearest-neighbor",
-                "FileNameImage": "__generated\\alternate_theme_images_widgets_gauge_large_needles_rough.png",
-                "XBitmapPosition": 5.0,
-                "YBitmapPosition": -70.0,
-                "ZAngle": 6.28,
-                "Scale": 0.2,
-                "XOrigo": 20.0,
-                "YOrigo": 22.0,
-                "ZOrigo": 1000.0,
-                "CameraDistance": 1000.0
               }
             ]
           },
           {
             "Type": "Container",
             "Name": "Dumper",
-            "X": 250,
-            "Y": 36,
+            "X": -1,
             "Width": 241,
             "Height": 320,
+            "LockPosition": true,
             "Components": [
               {
                 "Type": "Image",
@@ -133,10 +136,11 @@
           {
             "Type": "Image",
             "Name": "image1",
-            "X": 96,
-            "Y": 9,
+            "X": -1,
+            "Y": 249,
             "Width": 48,
             "Height": 72,
+            "LockPosition": true,
             "RelativeFilename": "egg_purple.png"
           }
         ],

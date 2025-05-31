@@ -42,8 +42,9 @@ void grid::makeRandomGrid()
 
 vector2 grid::getGridFromPosition(double x, double y)
 {
-    int grid_x = floor((x - grid_start_x) / grid_unit);
-    int grid_y = floor((y - grid_start_y) / grid_unit);
+   int grid_x = static_cast<int>(std::round((x - grid_start_x) / grid_unit));
+   int grid_y = floor((y - grid_start_y) / grid_unit);
+    
     return vector2(grid_x, grid_y);
 }
 
@@ -84,6 +85,16 @@ int grid::getPosX(int index)
 int grid::getPosY(int index)
 {
     return index / grid_size_x * grid_unit + grid_start_y;
+}
+
+float grid::getPosX(vector2 position)
+{
+    return position.x * grid_unit + grid_start_x;
+}
+
+float grid::getPosY(vector2 position)
+{
+    return position.y * grid_unit + grid_start_y;
 }
 
 

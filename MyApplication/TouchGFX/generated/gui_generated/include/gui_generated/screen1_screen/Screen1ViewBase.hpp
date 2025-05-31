@@ -11,8 +11,8 @@
 #include <touchgfx/widgets/TiledImage.hpp>
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
-#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/TextureMapper.hpp>
+#include <touchgfx/widgets/Image.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -36,8 +36,8 @@ protected:
     touchgfx::ScalableImage R_Wall;
     touchgfx::ScalableImage L_Wall;
     touchgfx::Container Hitter;
-    touchgfx::Image currentEgg;
     touchgfx::TextureMapper EggDirection;
+    touchgfx::Image currentEgg;
     touchgfx::Container Dumper;
     touchgfx::Image YellowEgg;
     touchgfx::Image GreenEgg;

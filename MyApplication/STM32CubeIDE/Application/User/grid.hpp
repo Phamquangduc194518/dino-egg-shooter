@@ -37,7 +37,8 @@ public:
     virtual void moveObjectToGridCell(Image *object, int index);
     virtual int getPosX(int index);
     virtual int getPosY(int index);
-
+    virtual float getPosX(vector2 gridPos);
+    virtual float getPosY(vector2 gridPos);
 
 
 private:

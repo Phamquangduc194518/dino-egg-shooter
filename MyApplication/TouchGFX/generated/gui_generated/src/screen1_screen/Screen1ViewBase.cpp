@@ -16,7 +16,7 @@ Screen1ViewBase::Screen1ViewBase()
     BackGround.setOffset(0, 0);
     add(BackGround);
 
-    Box.setPosition(0, 0, 250, 250);
+    Box.setPosition(0, 0, 240, 250);
     Celling.setBitmap(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_BACKGROUNDS_240X240_GRADIENT_DARK_ID));
     Celling.setPosition(-9, -7, 258, 18);
     Celling.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
@@ -35,26 +35,26 @@ Screen1ViewBase::Screen1ViewBase()
     add(Box);
 
     Hitter.setPosition(0, 0, 240, 320);
-    currentEgg.setXY(110, 288);
-    currentEgg.setBitmap(touchgfx::Bitmap(BITMAP_GREEN_REMOVEBG_PREVIEW_ID));
-    Hitter.add(currentEgg);
-
-    EggDirection.setXY(100, 276);
-    EggDirection.setBitmap(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_GAUGE_LARGE_NEEDLES_ROUGH_ID));
-    EggDirection.setWidth(40);
-    EggDirection.setHeight(44);
-    EggDirection.setBitmapPosition(5.0f, -70.0f);
-    EggDirection.setScale(0.2f);
+    EggDirection.setXY(0, 0);
+    EggDirection.setBitmap(touchgfx::Bitmap(BITMAP_ABC_ID));
+    EggDirection.setWidth(240);
+    EggDirection.setHeight(592);
+    EggDirection.setBitmapPosition(117.5f, 183.5f);
+    EggDirection.setScale(2.5f);
     EggDirection.setCameraDistance(1000.0f);
-    EggDirection.setOrigo(20.0f, 22.0f, 1000.0f);
-    EggDirection.setCamera(20.0f, 22.0f);
-    EggDirection.setAngles(0.0f, 0.0f, 6.28f);
+    EggDirection.setOrigo(120.0f, 296.0f, 1000.0f);
+    EggDirection.setCamera(120.0f, 296.0f);
+    EggDirection.setAngles(0.0f, 0.0f, 6.283f);
     EggDirection.setRenderingAlgorithm(touchgfx::TextureMapper::NEAREST_NEIGHBOR);
     Hitter.add(EggDirection);
 
+    currentEgg.setXY(110, 286);
+    currentEgg.setBitmap(touchgfx::Bitmap(BITMAP_GREEN_REMOVEBG_PREVIEW_ID));
+    Hitter.add(currentEgg);
+
     add(Hitter);
 
-    Dumper.setPosition(250, 36, 241, 320);
+    Dumper.setPosition(-1, 0, 241, 320);
     YellowEgg.setXY(-29, 29);
     YellowEgg.setBitmap(touchgfx::Bitmap(BITMAP_YELLOW_REMOVEBG_PREVIEW_ID));
     Dumper.add(YellowEgg);
@@ -73,7 +73,7 @@ Screen1ViewBase::Screen1ViewBase()
 
     add(Dumper);
 
-    image1.setXY(96, 9);
+    image1.setXY(-1, 249);
     image1.setBitmap(touchgfx::Bitmap(BITMAP_EGG_PURPLE_ID));
     add(image1);
 }

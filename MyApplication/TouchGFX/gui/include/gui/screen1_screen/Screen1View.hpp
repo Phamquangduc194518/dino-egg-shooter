@@ -22,6 +22,8 @@ protected:
     uint16_t originY;
     bool isShot;
     float direction;
+    float storeX;
+    float storeY;
     grid grid1;
 
 };

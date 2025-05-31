@@ -510,11 +510,6 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_50_tiny_rounded_pressed.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_alternate_theme_images_widgets_gauge_large_needles_rough.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_gauge_large_needles_rough.cpp</locationURI>
-		</link>
-		<link>
 			<name>Application/User/generated/image_Green-removebg-preview.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_Green-removebg-preview.cpp</locationURI>
@@ -528,6 +523,11 @@
 			<name>Application/User/generated/image_Yellow-removebg-preview.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_Yellow-removebg-preview.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_abc.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_abc.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_egg_background.cpp</name>
