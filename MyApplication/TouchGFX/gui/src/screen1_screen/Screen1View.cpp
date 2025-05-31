@@ -1,9 +1,10 @@
 #include <gui/screen1_screen/Screen1View.hpp>
 #include "cmsis_os.h"
 #include <cmath>
+#include "Vector2.hpp"
 
 extern osMessageQueueId_t Queue1Handle;
-void CalculateEggAngle(int tickCount, float &eggAngle);
+float CalculateEggAngle(int tickCount);
 Screen1View::Screen1View()
 {
 	tickCount = 0;
@@ -31,8 +32,7 @@ void Screen1View::handleTickEvent()
 	Screen1ViewBase::handleTickEvent();
 	tickCount++;
 
-	float eggAngle;
-	CalculateEggAngle(tickCount, eggAngle);
+	float eggAngle = CalculateEggAngle(tickCount);
 
 	EggDirection.setZAngle(eggAngle * (3.14f/180.0f));
 
@@ -40,6 +40,18 @@ void Screen1View::handleTickEvent()
 	{
 		float posX = currentEgg.getX() + sin(direction)*3;
 		float posY = currentEgg.getY() - cos(direction)*3;
+
+		vector2 nextGridPos = grid1.getGridFromPosition(posX,posY);
+		vector2 currentGridPos = grid1.getGridFromPosition(posX,posY);
+		if(nextGridPos.x < 0 && direction > 3.14)
+		{
+			direction = 6.28 - direction  ;
+		}
+		else if(nextGridPos.x >= GRID_SIZE_X-1 && direction < 3.14)
+		{
+			direction = 6.28 - direction;
+		}
+
 		currentEgg.moveTo(posX,posY);
 	}
 
@@ -67,15 +79,23 @@ void Screen1View::handleTickEvent()
 	invalidate();
 }
 
-void CalculateEggAngle(int tickCount, float &eggAngle)
+float  CalculateEggAngle(int tickCount)
 {
-	int cycle = tickCount % 180;
-		if(cycle < 90)
+	int cycle = tickCount % 240;
+		if(cycle< 60)
 		{
-			eggAngle = 315 + cycle; // increasing from -45 to 45
+			return cycle;
 		}
-		else
+		else if(cycle < 120)
 		{
-			eggAngle = 405 - (cycle - 90); // decreasing from 45 back to -45
+			return   120 - cycle;
+		}
+		else if(cycle < 180)
+		{
+			return 480 - cycle;
+		}
+		else if(cycle < 240)
+		{
+			return  120 + cycle;
 		}
 }

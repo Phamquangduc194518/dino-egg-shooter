@@ -14,13 +14,7 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <cmath>
-struct vector2
-{
-    int x;
-    int y;
-    vector2(int x, int y) : x(x), y(y) {}
-};
-
+#include "Vector2.hpp"
 
 class grid
 {
@@ -43,6 +37,9 @@ public:
     virtual void moveObjectToGridCell(Image *object, int index);
     virtual int getPosX(int index);
     virtual int getPosY(int index);
+
+
+
 private:
     void initGrid();
     void makeRandomGrid();
