@@ -50,6 +50,7 @@ Screen1ViewBase::Screen1ViewBase()
 
     currentEgg.setXY(111, 286);
     currentEgg.setBitmap(touchgfx::Bitmap(BITMAP_GREEN_REMOVEBG_PREVIEW_ID));
+    currentEgg.setVisible(false);
     Hitter.add(currentEgg);
 
     add(Hitter);

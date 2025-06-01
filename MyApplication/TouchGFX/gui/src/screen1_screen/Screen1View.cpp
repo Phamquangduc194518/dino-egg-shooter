@@ -21,6 +21,8 @@ Screen1View::Screen1View()
 	direction = -pi/3;
 	storeX = 0;
 	storeY = 0;
+	newShotImageCounter = 0;
+	currentShotImage = nullptr;
 }
 
 
@@ -48,10 +50,11 @@ void Screen1View::handleTickEvent()
 	{
 		uint8_t res;
 		osMessageQueueGet(Queue1Handle, &res, NULL, osWaitForever);
-		if(res=='T'&&!isShot)
+		if(res=='T' && !isShot)
 		{
 			tickRecord = tickCount;
-			currentEgg.moveTo(originX, originY);
+			createNewImage();
+			currentShotImage->moveTo(originX, originY);
 			isShot = 1;
 			storeX =0;
 			storeY =0;
@@ -63,15 +66,16 @@ void Screen1View::handleTickEvent()
 	// If a shot is active, update the egg's position
 	if(isShot)
 	{
-		float sinx = sin(direction);
-		float cosx = cos(direction);
-		storeX += sinx;
-		storeY -= cosx;
-		float moveX = currentEgg.getX() + sinx*3;
-		float moveY = currentEgg.getY() - cosx*3;
+		
+		float dx = sin(direction);
+		float dy = -cos(direction);
 
-		vector2 nextGridPos = grid1.getGridFromPosition(moveX, moveY);
-		vector2 currentGridPos = grid1.getGridFromPosition(currentEgg.getX(), currentEgg.getY());
+
+		float checkX = currentShotImage->getX() + dx*3;	
+		float checkY = currentShotImage->getY() - dy*3;
+
+		vector2 nextGridPos = grid1.getGridFromPosition(checkX, checkY);
+		vector2 currentGridPos = grid1.getGridFromPosition(currentShotImage->getX(), currentShotImage->getY());
 
 		if(nextGridPos.x < 0 && direction > 3.14)
 		{
@@ -82,34 +86,28 @@ void Screen1View::handleTickEvent()
 			direction = 6.28 - direction;
 		}
 
+		dx = sin(direction);
+		dy = -cos(direction);
+
+		storeX += dx * 3.0f; // hoặc speed biến
+		storeY += dy * 3.0f;
+
+		int moveX = static_cast<int>(storeX);
+		int moveY = static_cast<int>(storeY);
+
 		// Handle vertical (y-axis) boundaries: if the egg goes off the grid vertically, reset its position and stop the shot
 		if(nextGridPos.y < 0 )
 		{
-			currentEgg.moveTo(grid1.getPosX(currentGridPos), grid1.getPosY(currentGridPos));
+			currentShotImage->moveTo(grid1.getPosX(currentGridPos), grid1.getPosY(currentGridPos));
 			isShot = 0;
 		}
-		else
+		else if (moveX != 0 || moveY != 0)
 		{
-			if(storeX > 1)
-			{
-				currentEgg.moveRelative(1,0);
-				storeX -= 1;
-			}
-			else if(storeX < -1)
-			{
-				currentEgg.moveRelative(-1,0);
-				storeX += 1;
-			}
-		    if(storeY > 1)
-			{
-				currentEgg.moveRelative(0,1);
-				storeY -= 1;
-			}
-			else if(storeY < -1)	
-			{
-				currentEgg.moveRelative(0,-1);
-				storeY += 1;
-			}
+			currentShotImage->moveRelative(moveX, moveY);
+			currentShotImage->invalidate();
+
+			storeX -= moveX;
+			storeY -= moveY;
 		}
 	}
 	else
@@ -120,7 +118,23 @@ void Screen1View::handleTickEvent()
 	invalidate();
 }
 
-float  CalculateEggAngle(int tickCount)
+void Screen1View::createNewImage()
+{
+	newShotImage[newShotImageCounter] = touchgfx::Image();
+    newShotImage[newShotImageCounter].setBitmap(touchgfx::Bitmap(BITMAP_GREEN_REMOVEBG_PREVIEW_ID));
+    newShotImage[newShotImageCounter].moveTo(originX, originY);
+    newShotImage[newShotImageCounter].setVisible(true);
+    newShotImage[newShotImageCounter].setAlpha(255);
+    add(newShotImage[newShotImageCounter]);
+    newShotImage[newShotImageCounter].invalidate();
+
+    currentShotImage = &newShotImage[newShotImageCounter];
+    newShotImageCounter++;
+}
+
+
+
+float CalculateEggAngle(int tickCount)
 {
 	float cycle = tickCount % 360;
 	float returValue  =0;
@@ -159,3 +173,5 @@ float  CalculateEggAngle(int tickCount)
 
 	return returValue * 3.14/180 ;
 }
+
+

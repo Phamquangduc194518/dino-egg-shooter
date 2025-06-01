@@ -4,6 +4,7 @@
 #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 #include "../../../../../STM32CubeIDE/Application/User/grid.hpp"
+#include "../../../../generated/images/include/BitmapDatabase.hpp"
 class Screen1View : public Screen1ViewBase
 {
 public:
@@ -12,6 +13,7 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     virtual void handleTickEvent();
+    virtual void createNewImage();
 protected:
 
     uint32_t tickCount;
@@ -26,6 +28,9 @@ protected:
     float storeY;
     grid grid1;
 
+    touchgfx::Image* currentShotImage;
+    touchgfx::Image newShotImage[20];
+    int newShotImageCounter;
 };
 
 #endif // SCREEN1VIEW_HPP

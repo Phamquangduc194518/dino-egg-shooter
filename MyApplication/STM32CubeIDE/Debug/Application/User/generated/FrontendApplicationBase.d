@@ -45,30 +45,35 @@ Application/User/generated/FrontendApplicationBase.o: \
  ../../Middlewares/ST/touchgfx/framework/include/common/Meta.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/common/Partition.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/NoTransition.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SnapshotWidget.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
- ../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp \
- ../../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp \
+ ../../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
- ../../TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp \
+ ../../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
- ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/grid.hpp \
- ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/Vector2.hpp \
- ../../TouchGFX/gui/include/gui/screen3_screen/Screen3View.hpp \
- ../../TouchGFX/generated/gui_generated/include/gui_generated/screen3_screen/Screen3ViewBase.hpp \
- ../../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
- ../../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp \
- ../../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp \
- ../../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp \
+ ../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp \
+ ../../TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
+ ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/grid.hpp \
+ ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/Vector2.hpp \
+ ../../TouchGFX/gui/include/gui/screen1_screen/../../../../generated/images/include/BitmapDatabase.hpp \
+ ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
+ ../../TouchGFX/gui/include/gui/screen3_screen/Screen3View.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/screen3_screen/Screen3ViewBase.hpp \
+ ../../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp \
  ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp
@@ -117,30 +122,35 @@ Application/User/generated/FrontendApplicationBase.o: \
 ../../Middlewares/ST/touchgfx/framework/include/common/Meta.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/common/Partition.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/NoTransition.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SnapshotWidget.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
-../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:
-../../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:
+../../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:
+../../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
-../../TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp:
+../../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp:
-../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/grid.hpp:
-../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/Vector2.hpp:
-../../TouchGFX/gui/include/gui/screen3_screen/Screen3View.hpp:
-../../TouchGFX/generated/gui_generated/include/gui_generated/screen3_screen/Screen3ViewBase.hpp:
-../../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
-../../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:
-../../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:
-../../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:
+../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:
+../../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:
+../../TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp:
+../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/grid.hpp:
+../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/Vector2.hpp:
+../../TouchGFX/gui/include/gui/screen1_screen/../../../../generated/images/include/BitmapDatabase.hpp:
+../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
+../../TouchGFX/gui/include/gui/screen3_screen/Screen3View.hpp:
+../../TouchGFX/generated/gui_generated/include/gui_generated/screen3_screen/Screen3ViewBase.hpp:
+../../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp:
 ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:

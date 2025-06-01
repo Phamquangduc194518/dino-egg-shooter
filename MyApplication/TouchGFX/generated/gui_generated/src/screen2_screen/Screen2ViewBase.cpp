@@ -17,7 +17,7 @@ Screen2ViewBase::Screen2ViewBase() :
     image1.setBitmap(touchgfx::Bitmap(BITMAP_START_GAME_TOUCHGFX_ID));
     add(image1);
 
-    buttonWithLabel1.setXY(33, 103);
+    buttonWithLabel1.setXY(33, 110);
     buttonWithLabel1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_SMALL_ROUND_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_SMALL_ROUND_PRESSED_ID));
     buttonWithLabel1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_VQ74));
     buttonWithLabel1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -40,10 +40,6 @@ void Screen2ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
     if (&src == &buttonWithLabel1)
     {
-        //Interaction1
-        //When buttonWithLabel1 clicked call virtual function
-        //Call startGameClicked
-        startGameClicked();
         //Interaction2
         //When buttonWithLabel1 clicked change screen to Screen1
         //Go to Screen1 with screen transition towards West

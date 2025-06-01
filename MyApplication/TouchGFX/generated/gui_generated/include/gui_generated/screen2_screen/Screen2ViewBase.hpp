@@ -18,14 +18,6 @@ public:
     virtual ~Screen2ViewBase();
     virtual void setupScreen();
 
-    /*
-     * Virtual Action Handlers
-     */
-    virtual void startGameClicked()
-    {
-        // Override and implement this function in Screen2
-    }
-
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());

@@ -2,11 +2,9 @@
 ../Application/User/grid.cpp:51:9:virtual vector2 grid::getGridFromIndex(int)	8	static
 ../Application/User/grid.cpp:58:6:virtual void grid::setGridValue(vector2, int)	16	static
 ../Application/User/grid.cpp:63:5:virtual int grid::getGridValue(vector2)	8	static
-../Application/User/grid.cpp:68:6:virtual void grid::moveObjectToGridCell(touchgfx::Image*, vector2)	24	static
-../Application/User/grid.cpp:74:6:virtual void grid::moveObjectToGridCell(touchgfx::Image*, int)	32	static
-../Application/User/grid.cpp:80:5:virtual int grid::getPosX(int)	0	static
-../Application/User/grid.cpp:85:5:virtual int grid::getPosY(int)	0	static
-../Application/User/grid.cpp:90:7:virtual float grid::getPosX(vector2)	8	static
+../Application/User/grid.cpp:69:5:virtual int grid::getPosX(int)	0	static
+../Application/User/grid.cpp:74:5:virtual int grid::getPosY(int)	0	static
+../Application/User/grid.cpp:79:7:virtual float grid::getPosX(vector2)	8	static
 ../Application/User/grid.cpp:95:7:virtual float grid::getPosY(vector2)	8	static
 ../Application/User/grid.cpp:43:9:virtual vector2 grid::getGridFromPosition(double, double)	40	static
 ../Application/User/grid.hpp:31:13:virtual grid::~grid()	8	static

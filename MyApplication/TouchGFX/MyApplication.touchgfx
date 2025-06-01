@@ -9,13 +9,14 @@
             "Name": "image1",
             "Width": 240,
             "Height": 360,
+            "LockPosition": true,
             "RelativeFilename": "start_game_touchGFX.png"
           },
           {
             "Type": "ButtonWithLabel",
             "Name": "buttonWithLabel1",
             "X": 33,
-            "Y": 103,
+            "Y": 110,
             "Width": 175,
             "Height": 50,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_pressed.png",
@@ -36,17 +37,6 @@
           }
         ],
         "Interactions": [
-          {
-            "InteractionName": "Interaction1",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "buttonWithLabel1"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "startGameClicked"
-            }
-          },
           {
             "InteractionName": "Interaction2",
             "Trigger": {
@@ -145,6 +135,7 @@
                 "Y": 286,
                 "Width": 20,
                 "Height": 20,
+                "Visible": false,
                 "RelativeFilename": "Green-removebg-preview.png"
               }
             ]
@@ -252,7 +243,7 @@
       "Height": 320
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "Screen2",
+    "StartupScreenName": "Screen1",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

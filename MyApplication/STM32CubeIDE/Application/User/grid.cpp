@@ -65,17 +65,6 @@ int grid::getGridValue(vector2 position)
     return grid_value[position.x][position.y];
 }
 
-void grid::moveObjectToGridCell(Image *object, vector2 position)
-{
-    object->setX(position.x * grid_unit + grid_start_x);
-    object->setY(position.y * grid_unit + grid_start_y);
-}
-
-void grid::moveObjectToGridCell(Image *object, int index)
-{
-    vector2 position = getGridFromIndex(index);
-    moveObjectToGridCell(object, position);
-}
 
 int grid::getPosX(int index)
 {
@@ -89,12 +78,30 @@ int grid::getPosY(int index)
 
 float grid::getPosX(vector2 position)
 {
-    return position.x * grid_unit + grid_start_x;
+    if(position.x < 0)
+    {
+        return grid_start_x;
+    }
+    else if(position.x > grid_size_x)
+    {
+        return grid_size_x;
+    }
+    else
+    {
+        return position.x * grid_unit + grid_start_x;
+    }
 }
 
 float grid::getPosY(vector2 position)
 {
-    return position.y * grid_unit + grid_start_y;
+    if(position.y < 0)
+    {
+        return grid_start_y;
+    }
+    else
+    {
+        return position.y * grid_unit + grid_start_y;
+    }
 }
 
 

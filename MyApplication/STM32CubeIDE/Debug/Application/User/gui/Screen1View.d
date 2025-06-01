@@ -53,6 +53,8 @@ Application/User/gui/Screen1View.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
  ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/grid.hpp \
  ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/Vector2.hpp \
+ ../../TouchGFX/gui/include/gui/screen1_screen/../../../../generated/images/include/BitmapDatabase.hpp \
+ ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
  ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
@@ -118,6 +120,8 @@ Application/User/gui/Screen1View.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp:
 ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/grid.hpp:
 ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/Vector2.hpp:
+../../TouchGFX/gui/include/gui/screen1_screen/../../../../generated/images/include/BitmapDatabase.hpp:
+../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
 ../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../../Core/Inc/FreeRTOSConfig.h:

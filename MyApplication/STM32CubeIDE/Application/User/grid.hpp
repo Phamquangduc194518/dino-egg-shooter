@@ -33,13 +33,11 @@ public:
     virtual vector2 getGridFromIndex(int index);
     virtual void setGridValue(vector2 position, int value);
     virtual int getGridValue(vector2 position);
-    virtual void moveObjectToGridCell(Image *object, vector2 position);
-    virtual void moveObjectToGridCell(Image *object, int index);
     virtual int getPosX(int index);
     virtual int getPosY(int index);
     virtual float getPosX(vector2 gridPos);
     virtual float getPosY(vector2 gridPos);
-
+    
 
 private:
     void initGrid();

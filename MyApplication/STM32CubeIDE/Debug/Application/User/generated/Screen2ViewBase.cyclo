@@ -15,7 +15,6 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
-../../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:24:18:virtual void Screen2ViewBase::startGameClicked()	1
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<Screen2Presenter>::~View()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<Screen2ViewBase, const touchgfx::AbstractButton&>::~Callback()	1
 C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:29:1:Screen2ViewBase::~Screen2ViewBase()	1
@@ -26,8 +25,8 @@ C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/generated/gui_genera
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<Screen2ViewBase, const touchgfx::AbstractButton&>::~Callback()	1
 C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:29:1:virtual Screen2ViewBase::~Screen2ViewBase()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:39:6:void Screen2ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:39:6:void Screen2ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:132:10:void touchgfx::ButtonWithLabel::updateTextPosition()	2
 C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:9:1:Screen2ViewBase::Screen2ViewBase()	1
