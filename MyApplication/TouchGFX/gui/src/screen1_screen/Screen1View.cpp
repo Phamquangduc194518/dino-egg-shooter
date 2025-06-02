@@ -66,39 +66,43 @@ void Screen1View::handleTickEvent()
 	// If a shot is active, update the egg's position
 	if(isShot)
 	{
-		
+		// check the current direction. if need to change change this
 		float dx = sin(direction);
 		float dy = -cos(direction);
+		float currentX = currentShotImage->getX();
+		float currentY = currentShotImage->getY();
+		float checkX = currentX + 0.5 * GRID_UNIT * (direction > pi ? -1 : 1);
+		float checkY = currentY - 0.5 * GRID_UNIT;
 
+		vector2 nextHorizontalGridPos = grid1.getGridFromPosition(checkX, currentY);
+		vector2 nextVerticalGridPos = grid1.getGridFromPosition(currentX, checkY);
+		vector2 currentGridPos = grid1.getGridFromPosition(currentX, currentY);
 
-		float checkX = currentShotImage->getX() + dx*3;	
-		float checkY = currentShotImage->getY() - dy*3;
-
-		vector2 nextGridPos = grid1.getGridFromPosition(checkX, checkY);
-		vector2 currentGridPos = grid1.getGridFromPosition(currentShotImage->getX(), currentShotImage->getY());
-
-		if(nextGridPos.x < 0 && direction > 3.14)
+		if(nextHorizontalGridPos.x == -1 && direction > pi)
 		{
-			direction = 6.28 - direction;
+			direction = 2*pi - direction;
 		}
-		else if(nextGridPos.x > GRID_SIZE_X - 1 && direction < 3.14)
+		else if(nextHorizontalGridPos.x == GRID_SIZE_X && direction < pi)
 		{
-			direction = 6.28 - direction;
+			direction = 2*pi - direction;
 		}
 
+		//change direction
 		dx = sin(direction);
 		dy = -cos(direction);
 
-		storeX += dx * 3.0f; // hoặc speed biến
+		//ball movement dx, dy.
+		storeX += dx * 3.0f; // change to speed value
 		storeY += dy * 3.0f;
 
 		int moveX = static_cast<int>(storeX);
 		int moveY = static_cast<int>(storeY);
 
 		// Handle vertical (y-axis) boundaries: if the egg goes off the grid vertically, reset its position and stop the shot
-		if(nextGridPos.y < 0 )
+		if(nextVerticalGridPos.y ==-1 || grid1.getGridValue(nextVerticalGridPos)!=0 || grid1.getGridValue(nextHorizontalGridPos)!=0)
 		{
 			currentShotImage->moveTo(grid1.getPosX(currentGridPos), grid1.getPosY(currentGridPos));
+			grid1.setGridValue(currentGridPos, 1);
 			isShot = 0;
 		}
 		else if (moveX != 0 || moveY != 0)

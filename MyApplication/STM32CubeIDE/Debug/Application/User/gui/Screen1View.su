@@ -18,8 +18,8 @@ C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_scre
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	8	static
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:11:1:Screen1View::Screen1View()	536	static
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:137:7:float CalculateEggAngle(int)	8	static
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:11:1:Screen1View::Screen1View()	712	static
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:141:7:float CalculateEggAngle(int)	8	static
 C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:29:6:virtual void Screen1View::setupScreen()	0	static
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:121:6:virtual void Screen1View::createNewImage()	72	static
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:38:6:virtual void Screen1View::handleTickEvent()	72	static
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:125:6:virtual void Screen1View::createNewImage()	72	static
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:38:6:virtual void Screen1View::handleTickEvent()	88	static

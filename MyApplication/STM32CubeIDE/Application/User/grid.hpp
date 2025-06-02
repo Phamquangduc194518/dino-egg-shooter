@@ -6,7 +6,7 @@
  */
 
 #define GRID_SIZE_X 11
-#define GRID_SIZE_Y 11
+#define GRID_SIZE_Y 15
 #define GRID_START_X 10
 #define GRID_START_Y 10
 #define GRID_UNIT 20
@@ -30,11 +30,8 @@ public:
     grid();
     virtual ~grid(){}
     virtual vector2 getGridFromPosition(double x, double y);
-    virtual vector2 getGridFromIndex(int index);
     virtual void setGridValue(vector2 position, int value);
     virtual int getGridValue(vector2 position);
-    virtual int getPosX(int index);
-    virtual int getPosY(int index);
     virtual float getPosX(vector2 gridPos);
     virtual float getPosY(vector2 gridPos);
     
