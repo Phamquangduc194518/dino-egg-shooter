@@ -42,7 +42,7 @@ Application/User/grid.o: ../Application/User/grid.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  ../../TouchGFX/gui/include/gui/model/Model.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
- ../Application/User/Vector2.hpp
+ ../Application/User/Vector2.hpp ../Application/User/CircularQueue.hpp
 ../Application/User/grid.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
@@ -87,3 +87,4 @@ Application/User/grid.o: ../Application/User/grid.cpp \
 ../../TouchGFX/gui/include/gui/model/Model.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 ../Application/User/Vector2.hpp:
+../Application/User/CircularQueue.hpp:

@@ -6,6 +6,7 @@
  */
 
 #include "grid.hpp"
+
 grid::grid()
 {
     initGrid();
@@ -111,8 +112,51 @@ float grid::getPosY(vector2 position)
 
 
 
+void grid::setGridReference(vector2 position, touchgfx::Image* value)
+{
+    grid_reference[position.x][position.y] = value;
+}
+
+touchgfx::Image* grid::getGridReference(vector2 position)
+{
+    return grid_reference[position.x][position.y];
+}
 
 
+uint8_t grid::floodFill(uint8_t startRow, uint8_t startCol, vector2 output[], uint8_t maxOutput)
+{
+   for (int i = 0; i < GRID_SIZE_X; ++i)
+        for (int j = 0; j < GRID_SIZE_Y; ++j)
+            visited[i][j] = false;
+    uint8_t targetValue = grid_value[startRow][startCol];
+    uint8_t found = 0;
+    CircularQueue<vector2, MAX_QUEUE_SIZE> queue;
+    visited[startRow][startCol] = true;
+    queue.enqueue(vector2(startRow, startCol));
+    const int8_t dx[4] = {-1, 1, 0, 0};
+    const int8_t dy[4] = {0, 0, -1, 1};
 
-
+    while (!queue.isEmpty())    
+    {
+        vector2 current(0,0);
+        queue.dequeue(current);
+        int x = current.x;
+        int y = current.y;
+        if(found < maxOutput)
+        {
+            output[found++] = current;
+        }
+        for(int i = 0; i < 4; i++)
+        {
+            int nx = x + dx[i];
+            int ny = y + dy[i];
+            if(nx >= 0 && nx < GRID_SIZE_X && ny >= 0 && ny < GRID_SIZE_Y && !visited[nx][ny] && grid_value[nx][ny] == targetValue)
+            {
+                visited[nx][ny] = true;
+                queue.enqueue(vector2(nx, ny));
+            }
+        }
+    }
+    return found;
+}
 

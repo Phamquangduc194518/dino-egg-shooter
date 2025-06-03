@@ -5,6 +5,7 @@
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 #include "../../../../../STM32CubeIDE/Application/User/grid.hpp"
 #include "../../../../generated/images/include/BitmapDatabase.hpp"
+#include "../../../../../STM32CubeIDE/Application/User/eggPool.hpp"
 class Screen1View : public Screen1ViewBase
 {
 public:
@@ -14,6 +15,7 @@ public:
     virtual void tearDownScreen();
     virtual void handleTickEvent();
     virtual void createNewImage();
+    virtual void handleCollition();
 protected:
 
     uint32_t tickCount;
@@ -29,8 +31,9 @@ protected:
     grid grid1;
 
     touchgfx::Image* currentShotImage;
-    touchgfx::Image newShotImage[20];
     int newShotImageCounter;
+
+    eggPoolManager eggPool;  
 };
 
 #endif // SCREEN1VIEW_HPP

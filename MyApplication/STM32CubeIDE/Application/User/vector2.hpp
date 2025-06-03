@@ -7,6 +7,7 @@ struct vector2
     int x;
     int y;
     vector2(int x, int y) : x(x), y(y) {}
+    vector2() : x(0), y(0) {}
 };
 
 #endif // VECTOR2_HPP

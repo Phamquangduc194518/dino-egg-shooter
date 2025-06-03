@@ -7,6 +7,7 @@
 "./Application/User/TouchGFX/target/generated/STM32DMA.o"
 "./Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o"
 "./Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o"
+"./Application/User/eggPool.o"
 "./Application/User/freertos.o"
 "./Application/User/grid.o"
 "./Application/User/main.o"
