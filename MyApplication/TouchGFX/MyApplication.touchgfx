@@ -15,8 +15,8 @@
           {
             "Type": "ButtonWithLabel",
             "Name": "buttonWithLabel1",
-            "X": 33,
-            "Y": 110,
+            "X": 32,
+            "Y": 97,
             "Width": 175,
             "Height": 50,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_pressed.png",
@@ -189,11 +189,38 @@
           {
             "Type": "Image",
             "Name": "image1",
-            "X": 1,
-            "Y": 249,
-            "Width": 48,
-            "Height": 72,
-            "RelativeFilename": "egg_purple.png"
+            "X": 59,
+            "Y": 24,
+            "Width": 30,
+            "Height": 30,
+            "RelativeFilename": "egg_orange.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image1_2",
+            "X": 17,
+            "Y": 69,
+            "Width": 30,
+            "Height": 30,
+            "RelativeFilename": "egg_red.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image1_2_1",
+            "X": 59,
+            "Y": 69,
+            "Width": 30,
+            "Height": 30,
+            "RelativeFilename": "egg_blue.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image1_1",
+            "X": 17,
+            "Y": 24,
+            "Width": 30,
+            "Height": 30,
+            "RelativeFilename": "egg_green.png"
           }
         ],
         "Interactions": []
@@ -243,7 +270,7 @@
       "Height": 320
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "Screen1",
+    "StartupScreenName": "Screen2",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",
