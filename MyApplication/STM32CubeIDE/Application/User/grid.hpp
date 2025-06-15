@@ -28,8 +28,11 @@ private:
     int grid_unit;      
     int grid_size_x;
     int grid_size_y;    
-
+    int max_valued_y;
+    int currentVisited;
+    int maxVisited;
 public:
+    bool doneVisit;
     grid();
     virtual ~grid(){}
     virtual vector2 getGridFromPosition(double x, double y);
@@ -40,8 +43,11 @@ public:
     virtual float getPosX(vector2 gridPos);
     virtual float getPosY(vector2 gridPos);
     uint8_t floodFill(uint8_t startRow, uint8_t startCol, vector2 output[], uint8_t maxOutput);
-
-private:
+    uint8_t floodFillNoDiff(uint8_t startRow, uint8_t startCol, vector2 output[], uint8_t maxOutput);
+    bool hasMemberWithYZero(vector2 positions[], uint8_t count);
+    uint8_t findIsolatedGroupsWithoutYZero(vector2 outputGroups[MAX_QUEUE_SIZE]);
+    void resetVisit();
+    private:
     void initGrid();
     void makeRandomGrid();
 };

@@ -14,10 +14,13 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     virtual void handleTickEvent();
-    virtual void createNewImage();
+    virtual void createNewImage(uint8_t* RNGValue);
+    virtual void changeShotImage(uint8_t* RNGValue);
     virtual void handleCollition();
+
 protected:
 
+    uint8_t rngValue;
     uint32_t tickCount;
     uint32_t testValue;
     uint32_t tickDelay;
@@ -33,7 +36,7 @@ protected:
     touchgfx::Image* currentShotImage;
     int newShotImageCounter;
 
-    eggPoolManager eggPool;  
+    eggPoolManager eggPool;     
 };
 
 #endif // SCREEN1VIEW_HPP

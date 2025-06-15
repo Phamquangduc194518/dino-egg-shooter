@@ -48,35 +48,11 @@ Screen1ViewBase::Screen1ViewBase()
     EggDirection.setRenderingAlgorithm(touchgfx::TextureMapper::NEAREST_NEIGHBOR);
     Hitter.add(EggDirection);
 
-    currentEgg.setXY(111, 286);
-    currentEgg.setBitmap(touchgfx::Bitmap(BITMAP_GREEN_REMOVEBG_PREVIEW_ID));
-    currentEgg.setVisible(false);
+    currentEgg.setXY(105, 281);
+    currentEgg.setBitmap(touchgfx::Bitmap(BITMAP_EGG_GREEN_ID));
     Hitter.add(currentEgg);
 
     add(Hitter);
-
-    Dumper.setPosition(-1, 0, 241, 320);
-    YellowEgg.setXY(-29, 29);
-    YellowEgg.setBitmap(touchgfx::Bitmap(BITMAP_YELLOW_REMOVEBG_PREVIEW_ID));
-    Dumper.add(YellowEgg);
-
-    GreenEgg.setXY(-29, 9);
-    GreenEgg.setBitmap(touchgfx::Bitmap(BITMAP_GREEN_REMOVEBG_PREVIEW_ID));
-    Dumper.add(GreenEgg);
-
-    RedEgg.setXY(-29, -9);
-    RedEgg.setBitmap(touchgfx::Bitmap(BITMAP_RED_REMOVEBG_PREVIEW_ID));
-    Dumper.add(RedEgg);
-
-    TestingEgg.setXY(-29, 49);
-    TestingEgg.setBitmap(touchgfx::Bitmap(BITMAP_RED_REMOVEBG_PREVIEW_ID));
-    Dumper.add(TestingEgg);
-
-    add(Dumper);
-
-    image1.setXY(1, 249);
-    image1.setBitmap(touchgfx::Bitmap(BITMAP_EGG_PURPLE_ID));
-    add(image1);
 }
 
 Screen1ViewBase::~Screen1ViewBase()

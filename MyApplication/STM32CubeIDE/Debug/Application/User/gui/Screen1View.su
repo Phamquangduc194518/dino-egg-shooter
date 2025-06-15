@@ -1,11 +1,12 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:34:6:virtual void Screen1View::tearDownScreen()	0	static
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:142:6:virtual void Screen1View::handleCollition()	568	static
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:37:6:virtual void Screen1View::tearDownScreen()	0	static
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:183:6:virtual void Screen1View::handleCollition()	576	static
 ../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:13:13:Screen1View::~Screen1View()	8	static
 ../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:13:13:virtual Screen1View::~Screen1View()	8	static
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:10:1:Screen1View::Screen1View()	1536	static
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:163:7:float CalculateEggAngle(int)	8	static
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:29:6:virtual void Screen1View::setupScreen()	0	static
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:128:6:virtual void Screen1View::createNewImage()	24	static
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:38:6:virtual void Screen1View::handleTickEvent()	88	static
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:222:7:float CalculateEggAngle(int)	8	static
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:32:6:virtual void Screen1View::setupScreen()	0	static
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:163:6:virtual void Screen1View::changeShotImage(uint8_t*)	24	static
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:10:1:Screen1View::Screen1View()	1552	static
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:134:6:virtual void Screen1View::createNewImage(uint8_t*)	24	static
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:41:6:virtual void Screen1View::handleTickEvent()	96	static

@@ -131,96 +131,13 @@
               {
                 "Type": "Image",
                 "Name": "currentEgg",
-                "X": 111,
-                "Y": 286,
-                "Width": 20,
-                "Height": 20,
-                "Visible": false,
-                "RelativeFilename": "Green-removebg-preview.png"
+                "X": 105,
+                "Y": 281,
+                "Width": 30,
+                "Height": 30,
+                "RelativeFilename": "egg_green.png"
               }
             ]
-          },
-          {
-            "Type": "Container",
-            "Name": "Dumper",
-            "X": -1,
-            "Width": 241,
-            "Height": 320,
-            "LockPosition": true,
-            "Components": [
-              {
-                "Type": "Image",
-                "Name": "YellowEgg",
-                "X": -29,
-                "Y": 29,
-                "Width": 20,
-                "Height": 20,
-                "RelativeFilename": "Yellow-removebg-preview.png"
-              },
-              {
-                "Type": "Image",
-                "Name": "GreenEgg",
-                "X": -29,
-                "Y": 9,
-                "Width": 20,
-                "Height": 20,
-                "RelativeFilename": "Green-removebg-preview.png"
-              },
-              {
-                "Type": "Image",
-                "Name": "RedEgg",
-                "X": -29,
-                "Y": -9,
-                "Width": 20,
-                "Height": 20,
-                "RelativeFilename": "Red-removebg-preview.png"
-              },
-              {
-                "Type": "Image",
-                "Name": "TestingEgg",
-                "X": -29,
-                "Y": 49,
-                "Width": 20,
-                "Height": 20,
-                "RelativeFilename": "Red-removebg-preview.png"
-              }
-            ]
-          },
-          {
-            "Type": "Image",
-            "Name": "image1",
-            "X": 59,
-            "Y": 24,
-            "Width": 30,
-            "Height": 30,
-            "RelativeFilename": "egg_orange.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "image1_2",
-            "X": 17,
-            "Y": 69,
-            "Width": 30,
-            "Height": 30,
-            "RelativeFilename": "egg_red.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "image1_2_1",
-            "X": 59,
-            "Y": 69,
-            "Width": 30,
-            "Height": 30,
-            "RelativeFilename": "egg_blue.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "image1_1",
-            "X": 17,
-            "Y": 24,
-            "Width": 30,
-            "Height": 30,
-            "RelativeFilename": "egg_green.png"
           }
         ],
         "Interactions": []
@@ -270,7 +187,7 @@
       "Height": 320
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "Screen2",
+    "StartupScreenName": "Screen1",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

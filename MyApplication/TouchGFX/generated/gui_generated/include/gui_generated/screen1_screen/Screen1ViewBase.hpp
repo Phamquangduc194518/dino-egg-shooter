@@ -38,12 +38,6 @@ protected:
     touchgfx::Container Hitter;
     touchgfx::TextureMapper EggDirection;
     touchgfx::Image currentEgg;
-    touchgfx::Container Dumper;
-    touchgfx::Image YellowEgg;
-    touchgfx::Image GreenEgg;
-    touchgfx::Image RedEgg;
-    touchgfx::Image TestingEgg;
-    touchgfx::Image image1;
 
 private:
 

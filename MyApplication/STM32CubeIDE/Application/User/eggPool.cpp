@@ -26,6 +26,6 @@ touchgfx::Image* eggPoolManager::getEggFromPool() {
 void eggPoolManager::returnEggToPool(touchgfx::Image* egg) {
     if (!egg || eggPool.isFull())
         return;
-
+     
     eggPool.enqueue(egg);
 }
