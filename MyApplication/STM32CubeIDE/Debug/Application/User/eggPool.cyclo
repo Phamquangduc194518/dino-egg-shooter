@@ -15,6 +15,6 @@
 ../Application/User/eggPool.cpp:11:6:void eggPoolManager::initEggPool()	3
 ../Application/User/eggPool.cpp:7:1:eggPoolManager::eggPoolManager()	1
 ../Application/User/eggPool.cpp:17:18:touchgfx::Image* eggPoolManager::getEggFromPool()	2
-../Application/User/eggPool.cpp:26:6:void eggPoolManager::returnEggToPool(touchgfx::Image*)	3
+../Application/User/eggPool.cpp:26:6:void eggPoolManager::returnEggToPool(touchgfx::Image*)	5
 ../Application/User/eggPool.cpp:31:1:cpp)	2
 ../Application/User/eggPool.cpp:31:1:cpp)	2

@@ -6,18 +6,49 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
-      <Text Id="__SingleUse_QTYS" Alignment="Center" TypographyId="Typography_00">
+      <Text Id="__SingleUse_MAQT" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_X5NZ" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_VNU4" Alignment="Center" TypographyId="Typography_00">
         <Translation Language="GB">100</Translation>
       </Text>
-      <Text Id="__SingleUse_VQ74" Alignment="Center" TypographyId="Typography_00">
+      <Text Id="maxEgg" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">50</Translation>
+      </Text>
+      <Text Id="eggNum" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">00</Translation>
+      </Text>
+      <Text Id="point" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">00000</Translation>
+      </Text>
+      <Text Id="__SingleUse_VQ74" Alignment="Center" TypographyId="Typography_01">
         <Translation Language="GB">START GAME</Translation>
+      </Text>
+      <Text Id="__SingleUse_OVWB" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Level3</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y5MJ" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Level2</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z7WW" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Level1</Translation>
+      </Text>
+      <Text Id="__SingleUse_DNLZ" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;/&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_HOZ3" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="1,2,3,4,5,6,7,8,9,0" />
     <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography_00" Font="leelauib.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_01" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
   </Typographies>
 </TextDatabase>

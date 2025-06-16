@@ -11,6 +11,9 @@ public:
     virtual ~Screen3View() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void handleTickEvent();
+    virtual void updateText();
+    int score;
 protected:
 };
 

@@ -355,6 +355,16 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/screen3_screen/Screen3View.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/Screen4Presenter.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/screen4_screen/Screen4Presenter.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/Screen4View.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/screen4_screen/Screen4View.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/ApplicationFontProvider.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/ApplicationFontProvider.cpp</locationURI>
@@ -475,6 +485,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/screen3_screen/Screen3ViewBase.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/Screen4ViewBase.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/screen4_screen/Screen4ViewBase.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/BitmapDatabase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/BitmapDatabase.cpp</locationURI>
@@ -488,6 +503,16 @@
 			<name>Application/User/generated/image_alternate_theme_images_backgrounds_240x240_gradient_dark.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_backgrounds_240x240_gradient_dark.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_50_small_round_action.cpp</name>

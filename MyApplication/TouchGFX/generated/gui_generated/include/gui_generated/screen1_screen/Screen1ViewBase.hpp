@@ -13,6 +13,7 @@
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/TextureMapper.hpp>
 #include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -38,6 +39,8 @@ protected:
     touchgfx::Container Hitter;
     touchgfx::TextureMapper EggDirection;
     touchgfx::Image currentEgg;
+    touchgfx::TextAreaWithOneWildcard Point;
+    touchgfx::TextAreaWithTwoWildcards EggsCap;
 
 private:
 

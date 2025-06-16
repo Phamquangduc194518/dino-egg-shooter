@@ -988,7 +988,7 @@ void StartDefaultTask(void *argument)
 			osMessageQueuePut(Queue1Handle, &data, 0, 10);
 		}
 	  }
-    osDelay(1);
+    osDelay(100);
   }
   /* USER CODE END 5 */
 }

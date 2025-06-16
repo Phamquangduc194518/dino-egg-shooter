@@ -10,3 +10,33 @@ void Model::tick()
 {
 
 }
+
+void Model::setLevel(int level)
+{
+    levelSelect = level;
+}
+
+void Model::setTime(int time)
+{
+    this->time = time;
+}       
+
+void Model::setScore(int score)
+{
+    this->score = score;
+}
+
+int Model::getLevel()
+{
+    return levelSelect;
+}
+
+int Model::getTime()
+{
+    return time;
+}
+
+int Model::getScore()
+{
+    return score;
+}

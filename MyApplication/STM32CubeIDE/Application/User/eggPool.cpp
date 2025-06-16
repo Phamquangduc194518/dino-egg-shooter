@@ -1,8 +1,8 @@
 #include "EggPool.hpp"
 
-#define POOLLIMIT 50
+
 // Pool 10 eggs
-static touchgfx::Image eggInstances[POOLLIMIT];
+touchgfx::Image eggInstances[POOLLIMIT];
 
 eggPoolManager::eggPoolManager() {
     initEggPool();
@@ -24,8 +24,8 @@ touchgfx::Image* eggPoolManager::getEggFromPool() {
 }
 
 void eggPoolManager::returnEggToPool(touchgfx::Image* egg) {
-    if (!egg || eggPool.isFull())
-        return;
-     
+	if (!egg || eggPool.isFull() || eggPool.contains(egg))
+		return;
+
     eggPool.enqueue(egg);
 }

@@ -26,7 +26,8 @@ public:
     virtual void deactivate();
 
     virtual ~Screen1Presenter() {}
-
+    virtual int getLevel();
+    virtual void onLose(int score);
 private:
     Screen1Presenter();
 

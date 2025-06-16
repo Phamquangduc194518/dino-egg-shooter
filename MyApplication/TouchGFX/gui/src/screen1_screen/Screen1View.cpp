@@ -3,35 +3,45 @@
 #include <cmath>
 #include "Vector2.hpp"
 #include <cstdio>
-#define pi 3.14
-
+#include <gui/model/Model.hpp>
 extern osMessageQueueId_t Queue1Handle;
+#define pi 3.14
+#define maxTime 20000
+#define maxEggAllow 20
 float CalculateEggAngle(int tickCount);
+touchgfx::Unicode::UnicodeChar pointBuffer[10];      // đủ cho 5 chữ số + null
+touchgfx::Unicode::UnicodeChar eggsNumberBuffer[10];
+touchgfx::Unicode::UnicodeChar eggsCapBuffer[10];    // đủ cho dạng "Eggs: 5/10"
 Screen1View::Screen1View()
 {
-	tickCount = 0;
-	rngValue =1;
-	testValue = 0;
-	tickDelay = 100;
-	tickRecord =0;
-	isShot =0;
-	originX= currentEgg.getX();
-	originY= currentEgg.getY();
-	grid1 = grid();
-	direction = -pi/3;
-	storeX = 0;
-	storeY = 0;
-	newShotImageCounter = 0;
-	currentShotImage = nullptr;
-	eggPool = eggPoolManager();	
-	changeShotImage(&rngValue);
+	grid1		 		= grid();
+	rngValue 			= 1;
+	tickCount 			= 0;
+	tickDelay 			= 100;
+	tickRecord 			= 0;
+	currentShotImage 	= nullptr;
+	eggPool 			= eggPoolManager();
+	levelController 	= gameLevel();
+
+	originX				= currentEgg.getX();
+	originY				= currentEgg.getY();
+
+	isShot 				= 0;
+	direction 			= -pi/3;
+	storeX 				= 0;
+	storeY 				= 0;
+	eggNumber 			= 0;
+
+	time				= maxTime;
+	maxEgg				= maxEggAllow;
 	invalidate();
 }
-
 
 void Screen1View::setupScreen()
 {
     Screen1ViewBase::setupScreen();
+    changeShotImage(&rngValue);
+    loadLevel(presenter->getLevel());
 }
 
 void Screen1View::tearDownScreen()
@@ -41,11 +51,24 @@ void Screen1View::tearDownScreen()
 void Screen1View::handleTickEvent()
 {
 
+	if(time <=0|| eggNumber >= maxEggAllow)
+	{
+		time=0;
+		presenter->onLose(time);
+		static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen3ScreenNoTransition();
+	}
+	else if (eggNumber ==0)
+	{
+		presenter->onLose(time);
+		static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen3ScreenNoTransition();
+	}
+
 	Screen1ViewBase::handleTickEvent();
 	tickCount++;
 
 	float eggAngle = CalculateEggAngle(tickCount);
-
+	time -= 1 ; // time Score
+	updateText( time, eggNumber,maxEgg);
 
 
 	// Process incoming message first to trigger a new shot
@@ -55,6 +78,8 @@ void Screen1View::handleTickEvent()
 		osMessageQueueGet(Queue1Handle, &res, NULL, osWaitForever);
 		if(res=='T' && !isShot)
 		{
+			//TODO, add soundEff
+			//Shot Sound
 			tickRecord = tickCount;
 			createNewImage(&rngValue);
 			currentEgg.setAlpha(0);
@@ -76,8 +101,8 @@ void Screen1View::handleTickEvent()
 		float dy = -cos(direction);
 		float currentX = currentShotImage->getX();
 		float currentY = currentShotImage->getY();
-		float checkX = currentX + 0.5 * GRID_UNIT * (direction > pi ? -1 : 1);
-		float checkY = currentY - 0.5 * GRID_UNIT;
+		float checkX = currentX + 1 * GRID_UNIT * (direction > pi ? -1 : 1);
+		float checkY = currentY - 1 * GRID_UNIT;
 
 		vector2 nextHorizontalGridPos = grid1.getGridFromPosition(checkX, currentY);
 		vector2 nextVerticalGridPos = grid1.getGridFromPosition(currentX, checkY);
@@ -104,12 +129,38 @@ void Screen1View::handleTickEvent()
 		int moveY = static_cast<int>(storeY);
 
 		// Handle stacking balls
-		if(nextVerticalGridPos.y ==-1 || grid1.getGridValue(nextVerticalGridPos)!=0 || grid1.getGridValue(nextHorizontalGridPos)!=0)
+		if(nextVerticalGridPos.y ==-1 || grid1.getGridValue(nextHorizontalGridPos)!=0 || grid1.getGridValue(nextVerticalGridPos)!=0)
 		{
-			currentShotImage->moveTo(grid1.getPosX(currentGridPos), grid1.getPosY(currentGridPos));
+			if(grid1.getGridValue(currentGridPos) != 0)
+			{
+				if(grid1.getGridValue(nextVerticalGridPos) == 0)
+				{
+					currentShotImage->moveTo(
+						grid1.getPosX(currentGridPos),
+						grid1.getPosY(vector2(0, currentGridPos.y + 1))
+					);
+				}
+				else if(grid1.getGridValue(nextHorizontalGridPos) == 0)
+				{
+					int offset = (direction > pi) ? 1 : -1;
+					currentShotImage->moveTo(
+						grid1.getPosX(vector2(0, currentGridPos.y + offset)),
+						grid1.getPosY(currentGridPos)
+					);
+				}
+			}
+
+
+			else
+			{
+				currentShotImage->moveTo(grid1.getPosX(currentGridPos), grid1.getPosY(currentGridPos));
+			}
+
 			grid1.setGridValue(currentGridPos, rngValue);
 			grid1.setGridReference(currentGridPos, currentShotImage);
-			handleCollition();
+			handleCollision();
+			currentEgg.setAlpha(255);
+			currentEgg.invalidate();
 			isShot = 0;
 		}
 		// Handle Move
@@ -131,11 +182,11 @@ void Screen1View::handleTickEvent()
 
 }
 
-void Screen1View::createNewImage(uint8_t* RNGValue)
+void Screen1View::createNewImage(uint8_t RNGValue)
 {
 	auto egg = eggPool.getEggFromPool();
 	if (egg) {
-		switch(*RNGValue)	
+		switch(RNGValue)
 		{
 			case 1:
 				egg->setBitmap(touchgfx::Bitmap(BITMAP_EGG_BLUE_ID));
@@ -158,9 +209,37 @@ void Screen1View::createNewImage(uint8_t* RNGValue)
 	    egg->invalidate();
 	}
     currentShotImage = egg;
-    newShotImageCounter++;
 }
-void Screen1View::changeShotImage(uint8_t* RNGValue)
+void Screen1View::createNewImage(uint8_t *RNGValue)
+{
+	auto egg = eggPool.getEggFromPool();
+	if (egg) {
+		switch(*RNGValue)
+		{
+			case 1:
+				egg->setBitmap(touchgfx::Bitmap(BITMAP_EGG_BLUE_ID));
+				break;
+			case 2:
+				egg->setBitmap(touchgfx::Bitmap(BITMAP_EGG_GREEN_ID));
+				break;
+			case 3:
+				egg->setBitmap(touchgfx::Bitmap(BITMAP_EGG_RED_ID));
+				break;
+			case 4:
+				egg->setBitmap(touchgfx::Bitmap(BITMAP_EGG_ORANGE_ID));
+				break;
+		}
+
+	    egg->setXY(originX, originY);
+	    egg->setVisible(true);
+	    egg->setAlpha(255);
+	    add(*egg);
+	    egg->invalidate();
+	}
+    currentShotImage = egg;
+}
+
+void Screen1View::changeShotImage(uint8_t *RNGValue)
 {
 	switch(*RNGValue)
 	{
@@ -177,45 +256,66 @@ void Screen1View::changeShotImage(uint8_t* RNGValue)
 			currentEgg.setBitmap(touchgfx::Bitmap(BITMAP_EGG_ORANGE_ID));
 			break;
 	}
-	currentEgg.setAlpha(255);
 	currentEgg.invalidate();
 }
-void Screen1View::handleCollition()
+
+void Screen1View::handleCollision()
 {
-	float currentX = currentShotImage->getX();
-	float currentY = currentShotImage->getY();	
-	vector2 currentGridPos = grid1.getGridFromPosition(currentX, currentY);
-	vector2 output[64];
-	int floodFillCount = grid1.floodFill(currentGridPos.x, currentGridPos.y, output, 64);
-	if(floodFillCount > 2)
-	{
-		for(int i = 0; i < floodFillCount; i++)
-		{
-			grid1.setGridValue(output[i], 0);
-			grid1.getGridReference(output[i])->setVisible(false);
-			eggPool.returnEggToPool(grid1.getGridReference(output[i]));
-			grid1.setGridReference(output[i], nullptr);
-		}
-	}
+	//TODO, add soundEff
+	//Collition sound
+    float currentX = currentShotImage->getX();
+    float currentY = currentShotImage->getY();
+    vector2 currentGridPos = grid1.getGridFromPosition(currentX, currentY);
+    vector2 output[64];
+    int floodFillCount = grid1.floodFill(currentGridPos.x, currentGridPos.y, output, 64);
+    eggNumber++;
+    if (floodFillCount > 2)
+    {
+    	//TODO, add soundEff
+    	//Break sound
+        for (int i = 0; i < floodFillCount; i++)
+        {
+            vector2 pos = output[i];
+            touchgfx::Image* egg = grid1.getGridReference(pos);
+            if (egg)
+            {
+            	egg->setVisible(false);
+            	egg->setAlpha(0);
+            	egg->invalidate();
+                eggPool.returnEggToPool(egg);
+                eggNumber--;
+                remove(*egg);
+            }
+            grid1.setGridValue(pos, 0);
+            grid1.setGridReference(pos, nullptr);
+        }
+    }
 
-	grid1.resetVisit();
-	do
-	{
-		floodFillCount = grid1.findIsolatedGroupsWithoutYZero(output);
-		for(int i = 0; i < floodFillCount; i++)
-		{
-			grid1.setGridValue(output[i], 0);
-			grid1.getGridReference(output[i])->setVisible(false);
-			eggPool.returnEggToPool(grid1.getGridReference(output[i]));
-			grid1.setGridReference(output[i], nullptr);
-		}
+    grid1.resetVisit();
+    do
+    {
+        floodFillCount = grid1.findIsolatedGroupsWithoutYZero(output);
+        for (int i = 0; i < floodFillCount; i++)
+        {
+            vector2 pos = output[i];
+            touchgfx::Image* egg = grid1.getGridReference(pos);
+            if (egg)
+            {
+            	egg->setVisible(false);
+            	egg->setAlpha(0);
+            	egg->invalidate();
+                eggPool.returnEggToPool(egg);
+                eggNumber--;
+                remove(*egg);
+            }
+            grid1.setGridValue(pos, 0);
+            grid1.setGridReference(pos, nullptr);
+        }
 
-	}
-	while(!grid1.doneVisit);
+    } while (!grid1.doneVisit);
 
-	rngValue = tickRecord%4+1;
-	changeShotImage(&rngValue);
-
+    rngValue = tickRecord % 4 + 1;
+    changeShotImage(&rngValue);
 }
 
 
@@ -259,4 +359,46 @@ float CalculateEggAngle(int tickCount)
 	return returValue * 3.14/180 ;
 }
 
+void Screen1View::loadLevel(int levelIndex)
+{
+    level currentLevel = levelController.getLevel(levelIndex);
 
+    for (int i = 0; i < 77; ++i)
+    {
+        uint8_t tileType = currentLevel.levelData[i];
+        if (tileType != 0)
+        {
+            vector2 gridPos = vector2(i%11,i/11);
+            eggNumber++;
+            // Create a new image for this tile
+            createNewImage(tileType);
+            currentShotImage->moveTo(grid1.getPosX(gridPos), grid1.getPosY(gridPos));
+            grid1.setGridValue(gridPos, tileType);
+            grid1.setGridReference(gridPos, currentShotImage);
+
+        }
+    }
+}
+
+int Screen1Presenter::getLevel()
+{
+    return model->getLevel();
+}
+
+void Screen1Presenter::onLose(int score)
+{
+    return model->setScore(score);
+}
+void Screen1View::updateText(int score, int collected, int total)
+{
+    Unicode::snprintf(pointBuffer, sizeof(pointBuffer) / sizeof(pointBuffer[0]), "%d", score);
+    Point.setWildcard(pointBuffer);
+    Point.invalidate();
+
+    Unicode::snprintf(eggsNumberBuffer, sizeof(eggsNumberBuffer) / sizeof(eggsNumberBuffer[0]), "%d", collected);
+    Unicode::snprintf(eggsCapBuffer, sizeof(eggsCapBuffer) / sizeof(eggsCapBuffer[0]), "%d", total);
+
+    EggsCap.setWildcard1(eggsNumberBuffer);
+    EggsCap.setWildcard2(eggsCapBuffer);
+    EggsCap.invalidate();
+}

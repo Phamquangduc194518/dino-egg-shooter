@@ -222,9 +222,9 @@ uint8_t grid::findIsolatedGroupsWithoutYZero(vector2 outputGroups[MAX_QUEUE_SIZE
     if(currentVisited == maxVisited)
     	doneVisit = true;
     // Scan the entire grid
-    for (int i = 0; i < GRID_SIZE_X ; i++)
+    for (int i = 0; i < GRID_SIZE_X  ; i++)
     {
-        for (int j = 0; j < max_valued_y ; j++)
+        for (int j = 0; j < max_valued_y  ; j++)
         {
             // If this cell hasn't been visited and has a non-zero value
             if (!visited[i][j] && grid_value[i][j] != 0)

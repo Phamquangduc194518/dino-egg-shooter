@@ -41,8 +41,8 @@ void Screen2ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
     if (&src == &buttonWithLabel1)
     {
         //Interaction2
-        //When buttonWithLabel1 clicked change screen to Screen1
-        //Go to Screen1 with screen transition towards West
-        application().gotoScreen1ScreenSlideTransitionWest();
+        //When buttonWithLabel1 clicked change screen to Screen4
+        //Go to Screen4 with screen transition towards West
+        application().gotoScreen4ScreenSlideTransitionWest();
     }
 }

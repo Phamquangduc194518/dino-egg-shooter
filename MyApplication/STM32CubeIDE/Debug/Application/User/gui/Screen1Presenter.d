@@ -51,12 +51,17 @@ Application/User/gui/Screen1Presenter.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/grid.hpp \
  ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/Vector2.hpp \
  ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/CircularQueue.hpp \
  ../../TouchGFX/gui/include/gui/screen1_screen/../../../../generated/images/include/BitmapDatabase.hpp \
  ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
- ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/eggPool.hpp
+ ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/eggPool.hpp \
+ ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/gameLevel.hpp
 ../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -108,9 +113,14 @@ Application/User/gui/Screen1Presenter.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/grid.hpp:
 ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/Vector2.hpp:
 ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/CircularQueue.hpp:
 ../../TouchGFX/gui/include/gui/screen1_screen/../../../../generated/images/include/BitmapDatabase.hpp:
 ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
 ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/eggPool.hpp:
+../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/gameLevel.hpp:

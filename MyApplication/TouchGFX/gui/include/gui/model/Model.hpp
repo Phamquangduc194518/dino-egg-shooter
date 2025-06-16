@@ -12,8 +12,17 @@ public:
     {
         modelListener = listener;
     }
-
+    void setLevel(int level);
+    void setTime(int time);
+    void setScore(int score);
+    int getLevel();
+    int getTime();
+    int getScore();
     void tick();
+private:
+    int levelSelect;
+    int time;
+    int score;
 protected:
     ModelListener* modelListener;
 };

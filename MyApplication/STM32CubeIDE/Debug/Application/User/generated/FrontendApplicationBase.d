@@ -67,15 +67,21 @@ Application/User/generated/FrontendApplicationBase.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/grid.hpp \
  ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/Vector2.hpp \
  ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/CircularQueue.hpp \
  ../../TouchGFX/gui/include/gui/screen1_screen/../../../../generated/images/include/BitmapDatabase.hpp \
  ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
  ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/eggPool.hpp \
+ ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/gameLevel.hpp \
  ../../TouchGFX/gui/include/gui/screen3_screen/Screen3View.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen3_screen/Screen3ViewBase.hpp \
  ../../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp \
+ ../../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/screen4_screen/Screen4ViewBase.hpp \
+ ../../TouchGFX/gui/include/gui/screen4_screen/Screen4Presenter.hpp \
  ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp
@@ -146,15 +152,21 @@ Application/User/generated/FrontendApplicationBase.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/grid.hpp:
 ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/Vector2.hpp:
 ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/CircularQueue.hpp:
 ../../TouchGFX/gui/include/gui/screen1_screen/../../../../generated/images/include/BitmapDatabase.hpp:
 ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
 ../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/eggPool.hpp:
+../../TouchGFX/gui/include/gui/screen1_screen/../../../../../STM32CubeIDE/Application/User/gameLevel.hpp:
 ../../TouchGFX/gui/include/gui/screen3_screen/Screen3View.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen3_screen/Screen3ViewBase.hpp:
 ../../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp:
+../../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp:
+../../TouchGFX/generated/gui_generated/include/gui_generated/screen4_screen/Screen4ViewBase.hpp:
+../../TouchGFX/gui/include/gui/screen4_screen/Screen4Presenter.hpp:
 ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:

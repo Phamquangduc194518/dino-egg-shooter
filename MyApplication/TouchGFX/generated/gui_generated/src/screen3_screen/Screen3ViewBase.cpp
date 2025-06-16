@@ -6,7 +6,8 @@
 #include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
-Screen3ViewBase::Screen3ViewBase()
+Screen3ViewBase::Screen3ViewBase() :
+    buttonCallback(this, &Screen3ViewBase::buttonCallbackHandler)
 {
     __background.setPosition(0, 0, 240, 320);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -16,12 +17,24 @@ Screen3ViewBase::Screen3ViewBase()
     image1.setBitmap(touchgfx::Bitmap(BITMAP_END_GAME_TOUCHGFX_ID));
     add(image1);
 
-    buttonWithLabel1.setXY(65, 110);
-    buttonWithLabel1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_TINY_ROUNDED_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_TINY_ROUNDED_PRESSED_ID));
-    buttonWithLabel1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_QTYS));
-    buttonWithLabel1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    add(buttonWithLabel1);
+    buttonWithLabel1_1.setXY(354, 85);
+    buttonWithLabel1_1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_TINY_ROUNDED_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_TINY_ROUNDED_PRESSED_ID));
+    buttonWithLabel1_1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_VNU4));
+    buttonWithLabel1_1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    buttonWithLabel1_1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    buttonWithLabel1_1.setAction(buttonCallback);
+    add(buttonWithLabel1_1);
+
+    button1.setXY(33, 127);
+    button1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_SMALL_ROUND_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_SMALL_ROUND_PRESSED_ID));
+    add(button1);
+
+    ScoreText.setPosition(33, 139, 175, 26);
+    ScoreText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    ScoreText.setLinespacing(0);
+    ScoreText.setWildcard(touchgfx::TypedText(T___SINGLEUSE_MAQT).getText());
+    ScoreText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_X5NZ));
+    add(ScoreText);
 }
 
 Screen3ViewBase::~Screen3ViewBase()
@@ -32,4 +45,15 @@ Screen3ViewBase::~Screen3ViewBase()
 void Screen3ViewBase::setupScreen()
 {
 
+}
+
+void Screen3ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &buttonWithLabel1_1)
+    {
+        //Interaction1
+        //When buttonWithLabel1_1 clicked change screen to Screen3
+        //Go to Screen3 with no screen transition
+        application().gotoScreen3ScreenNoTransition();
+    }
 }

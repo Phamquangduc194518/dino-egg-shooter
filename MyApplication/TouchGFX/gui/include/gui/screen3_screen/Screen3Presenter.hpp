@@ -24,9 +24,8 @@ public:
      * (ie. made inactive). Teardown functionality can be placed here.
      */
     virtual void deactivate();
-
+    virtual int loadScore();
     virtual ~Screen3Presenter() {}
-
 private:
     Screen3Presenter();
 

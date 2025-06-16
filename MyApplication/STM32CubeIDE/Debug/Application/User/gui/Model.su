@@ -1,2 +1,8 @@
 C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/model/Model.cpp:4:1:Model::Model()	0	static
 C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/model/Model.cpp:9:6:void Model::tick()	0	static
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/model/Model.cpp:14:6:void Model::setLevel(int)	0	static
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/model/Model.cpp:19:6:void Model::setTime(int)	0	static
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/model/Model.cpp:24:6:void Model::setScore(int)	0	static
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/model/Model.cpp:29:5:int Model::getLevel()	0	static
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/model/Model.cpp:34:5:int Model::getTime()	0	static
+C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/model/Model.cpp:39:5:int Model::getScore()	0	static

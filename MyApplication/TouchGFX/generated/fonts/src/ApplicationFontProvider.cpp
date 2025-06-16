@@ -21,6 +21,9 @@ touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId typography)
     case Typography::TYPOGRAPHY_00:
         // leelauib_20_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[3]);
+    case Typography::TYPOGRAPHY_01:
+        // verdana_20_4bpp
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[0]);
     default:
         return 0;
     }

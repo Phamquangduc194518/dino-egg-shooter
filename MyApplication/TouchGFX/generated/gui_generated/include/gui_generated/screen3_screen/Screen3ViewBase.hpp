@@ -10,6 +10,8 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class Screen3ViewBase : public touchgfx::View<Screen3Presenter>
 {
@@ -28,9 +30,21 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Image image1;
-    touchgfx::ButtonWithLabel buttonWithLabel1;
+    touchgfx::ButtonWithLabel buttonWithLabel1_1;
+    touchgfx::Button button1;
+    touchgfx::TextAreaWithOneWildcard ScoreText;
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<Screen3ViewBase, const touchgfx::AbstractButton&> buttonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
 };
 

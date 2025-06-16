@@ -4,6 +4,7 @@
 #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 Screen1ViewBase::Screen1ViewBase()
 {
@@ -35,7 +36,7 @@ Screen1ViewBase::Screen1ViewBase()
     add(Box);
 
     Hitter.setPosition(0, 0, 240, 320);
-    EggDirection.setXY(1, 0);
+    EggDirection.setXY(2, 2);
     EggDirection.setBitmap(touchgfx::Bitmap(BITMAP_ABC_ID));
     EggDirection.setWidth(240);
     EggDirection.setHeight(592);
@@ -53,6 +54,21 @@ Screen1ViewBase::Screen1ViewBase()
     Hitter.add(currentEgg);
 
     add(Hitter);
+
+    Point.setPosition(22, 261, 100, 24);
+    Point.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    Point.setLinespacing(0);
+    Point.setWildcard(touchgfx::TypedText(T_POINT).getText());
+    Point.setTypedText(touchgfx::TypedText(T___SINGLEUSE_HOZ3));
+    add(Point);
+
+    EggsCap.setPosition(146, 262, 72, 23);
+    EggsCap.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    EggsCap.setLinespacing(0);
+    EggsCap.setWildcard1(touchgfx::TypedText(T_EGGNUM).getText());
+    EggsCap.setWildcard2(touchgfx::TypedText(T_MAXEGG).getText());
+    EggsCap.setTypedText(touchgfx::TypedText(T___SINGLEUSE_DNLZ));
+    add(EggsCap);
 }
 
 Screen1ViewBase::~Screen1ViewBase()
