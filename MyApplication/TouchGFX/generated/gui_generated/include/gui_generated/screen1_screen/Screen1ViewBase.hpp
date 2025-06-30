@@ -41,6 +41,7 @@ protected:
     touchgfx::Image currentEgg;
     touchgfx::TextAreaWithOneWildcard Point;
     touchgfx::TextAreaWithTwoWildcards EggsCap;
+    touchgfx::Image brokenegg;
 
 private:
 

@@ -5,6 +5,7 @@
 #include <gui/model/Model.hpp>
 extern osMessageQueueId_t Queue1Handle;
 touchgfx::Unicode::UnicodeChar point3Buffer[10];
+touchgfx::Unicode::UnicodeChar highScoreBuffer[10];
 Screen3View::Screen3View()
 {
 
@@ -14,6 +15,7 @@ void Screen3View::setupScreen()
 {
     Screen3ViewBase::setupScreen();
     score = presenter->loadScore();
+    highScore = presenter->loadHighScore();
     updateText();
 }
 
@@ -40,11 +42,20 @@ void Screen3View::updateText()
     Unicode::snprintf(point3Buffer, sizeof(point3Buffer) / sizeof(point3Buffer[0]), "%d", score);
     ScoreText.setWildcard(point3Buffer);
     ScoreText.invalidate();
+
+    Unicode::snprintf(highScoreBuffer, sizeof(highScoreBuffer) / sizeof(highScoreBuffer[0]), "%d", highScore);
+    ScoreText2.setWildcard(highScoreBuffer);
+    ScoreText2.invalidate();
 }
 
 int Screen3Presenter::loadScore()
 {
 	return model->getScore();
+}
+
+int Screen3Presenter::loadHighScore()
+{
+	return model->getHighScore();
 }
 
 

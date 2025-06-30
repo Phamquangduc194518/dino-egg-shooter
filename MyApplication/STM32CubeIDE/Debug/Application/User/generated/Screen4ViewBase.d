@@ -1,5 +1,5 @@
 Application/User/generated/Screen4ViewBase.o: \
- C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/generated/gui_generated/src/screen4_screen/Screen4ViewBase.cpp \
+ C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/generated/gui_generated/src/screen4_screen/Screen4ViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen4_screen/Screen4ViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

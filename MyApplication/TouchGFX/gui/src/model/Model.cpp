@@ -1,5 +1,6 @@
 #include <gui/model/Model.hpp>
 #include <gui/model/ModelListener.hpp>
+#include "FlashStorage.h"
 
 Model::Model() : modelListener(0)
 {
@@ -21,9 +22,14 @@ void Model::setTime(int time)
     this->time = time;
 }       
 
-void Model::setScore(int score)
+void Model::setScore(int newScore)
 {
-    this->score = score;
+    score = newScore;
+    uint32_t savedHigh = Flash_ReadHighScore();
+    if (newScore > (int)savedHigh)
+    {
+        Flash_WriteHighScore(newScore);
+    }
 }
 
 int Model::getLevel()
@@ -39,4 +45,9 @@ int Model::getTime()
 int Model::getScore()
 {
     return score;
+}
+
+int Model::getHighScore() const
+{
+    return Flash_ReadHighScore();
 }

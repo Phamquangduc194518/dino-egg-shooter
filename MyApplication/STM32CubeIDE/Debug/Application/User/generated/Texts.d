@@ -1,5 +1,5 @@
 Application/User/generated/Texts.o: \
- C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/generated/texts/src/Texts.cpp \
+ C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/generated/texts/src/Texts.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \

@@ -1,18 +1,34 @@
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:147:23:virtual touchgfx::Drawable* touchgfx::Drawable::getFirstChild()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:315:18:virtual void touchgfx::Drawable::setX(int16_t)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:327:18:virtual void touchgfx::Drawable::setY(int16_t)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:356:18:virtual void touchgfx::Drawable::setWidth(int16_t)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:368:18:virtual void touchgfx::Drawable::setHeight(int16_t)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:378:18:virtual void touchgfx::Drawable::childGeometryChanged()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:389:18:virtual void touchgfx::Drawable::handleClickEvent(const touchgfx::ClickEvent&)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:401:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:490:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:703:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:47:6:virtual void Screen1View::tearDownScreen()	1
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:362:6:virtual void Screen1View::loadLevel(int)	3
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:63:6:virtual void Screen1View::tearDownScreen()	1
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:267:6:virtual void Screen1View::changeShotImage(uint8_t*)	5
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:401:6:virtual void Screen1View::loadLevel(int)	3
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:431:6:virtual void Screen1View::updateText(int, int, int)	1
 ../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:14:13:Screen1View::~Screen1View()	1
 ../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:14:13:virtual Screen1View::~Screen1View()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:322:7:float CalculateEggAngle(int)	9
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:383:5:virtual int Screen1Presenter::getLevel()	1
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:388:6:virtual void Screen1Presenter::onLose(int)	1
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:15:1:Screen1View::Screen1View()	1
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:392:6:virtual void Screen1View::updateText(int, int, int)	1
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:40:6:virtual void Screen1View::setupScreen()	1
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:242:6:virtual void Screen1View::changeShotImage(uint8_t*)	5
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:185:6:virtual void Screen1View::createNewImage(uint8_t)	6
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:213:6:virtual void Screen1View::createNewImage(uint8_t*)	6
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:262:6:virtual void Screen1View::handleCollision()	8
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:51:6:virtual void Screen1View::handleTickEvent()	19
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	1
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:19:1:Screen1View::Screen1View()	1
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:361:7:float CalculateEggAngle(int)	9
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:422:5:virtual int Screen1Presenter::getLevel()	1
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:427:6:virtual void Screen1Presenter::onLose(int)	1
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:443:1:cpp)	1
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:46:6:virtual void Screen1View::setupScreen()	1
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:210:6:virtual void Screen1View::createNewImage(uint8_t)	6
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:238:6:virtual void Screen1View::createNewImage(uint8_t*)	6
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:287:6:virtual void Screen1View::handleCollision()	8
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:67:6:virtual void Screen1View::handleTickEvent()	21

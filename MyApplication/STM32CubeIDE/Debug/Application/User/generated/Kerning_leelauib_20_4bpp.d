@@ -1,5 +1,5 @@
 Application/User/generated/Kerning_leelauib_20_4bpp.o: \
- C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/generated/fonts/src/Kerning_leelauib_20_4bpp.cpp \
+ C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/generated/fonts/src/Kerning_leelauib_20_4bpp.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \

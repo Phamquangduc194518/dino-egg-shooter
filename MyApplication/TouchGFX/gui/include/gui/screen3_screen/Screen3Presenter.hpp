@@ -25,6 +25,7 @@ public:
      */
     virtual void deactivate();
     virtual int loadScore();
+    virtual int loadHighScore();
     virtual ~Screen3Presenter() {}
 private:
     Screen3Presenter();

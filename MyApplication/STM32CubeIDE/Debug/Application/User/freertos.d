@@ -1,5 +1,5 @@
 Application/User/freertos.o: \
- C:/TouchGFXProjects/TouchGFXProjects/MyApplication/Core/Src/freertos.c \
+ C:/TouchGFXProjects/dino-egg-shooter/MyApplication/Core/Src/freertos.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \

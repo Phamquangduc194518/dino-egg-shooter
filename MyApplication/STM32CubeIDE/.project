@@ -550,6 +550,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_egg_blue.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_egg_broken.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_egg_broken.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_egg_green.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_egg_green.cpp</locationURI>

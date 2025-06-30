@@ -19,6 +19,7 @@ public:
     int getTime();
     int getScore();
     void tick();
+    int getHighScore() const;
 private:
     int levelSelect;
     int time;

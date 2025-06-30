@@ -4,14 +4,18 @@
 #include "Vector2.hpp"
 #include <cstdio>
 #include <gui/model/Model.hpp>
+extern "C" {
+#include "FlashStorage.h"
+}
 extern osMessageQueueId_t Queue1Handle;
 #define pi 3.14
 #define maxTime 20000
-#define maxEggAllow 20
+#define maxEggAllow 30
 float CalculateEggAngle(int tickCount);
 touchgfx::Unicode::UnicodeChar pointBuffer[10];      // đủ cho 5 chữ số + null
 touchgfx::Unicode::UnicodeChar eggsNumberBuffer[10];
 touchgfx::Unicode::UnicodeChar eggsCapBuffer[10];    // đủ cho dạng "Eggs: 5/10"
+touchgfx::Image brokenegg;
 Screen1View::Screen1View()
 {
 	grid1		 		= grid();
@@ -35,6 +39,8 @@ Screen1View::Screen1View()
 	time				= maxTime;
 	maxEgg				= maxEggAllow;
 	invalidate();
+
+	score =0;
 }
 
 void Screen1View::setupScreen()
@@ -42,6 +48,16 @@ void Screen1View::setupScreen()
     Screen1ViewBase::setupScreen();
     changeShotImage(&rngValue);
     loadLevel(presenter->getLevel());
+//    Flash_Clear();
+    brokenegg.setBitmap(Bitmap(BITMAP_EGG_BROKEN_ID));
+    brokenegg.setVisible(false);
+    brokenegg.setAlpha(255);
+    brokenegg.setXY(0, 0);
+    add(brokenegg);
+    brokenegg.invalidate();
+
+    splashTimer = 0;
+    isSplashVisible = false;
 }
 
 void Screen1View::tearDownScreen()
@@ -54,13 +70,22 @@ void Screen1View::handleTickEvent()
 	if(time <=0|| eggNumber >= maxEggAllow)
 	{
 		time=0;
-		presenter->onLose(time);
+		presenter->onLose(score);
 		static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen3ScreenNoTransition();
 	}
 	else if (eggNumber ==0)
 	{
-		presenter->onLose(time);
+		presenter->onLose(score);
 		static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen3ScreenNoTransition();
+	}
+
+	if (isSplashVisible) {
+	    splashTimer++;
+	    if (splashTimer > 10) {
+	        brokenegg.setVisible(false);
+	        brokenegg.invalidate();
+	        isSplashVisible = false;
+	    }
 	}
 
 	Screen1ViewBase::handleTickEvent();
@@ -273,6 +298,20 @@ void Screen1View::handleCollision()
     {
     	//TODO, add soundEff
     	//Break sound
+    	score += floodFillCount * 10;
+    	vector2 splashPos = output[0];  // Vị trí quả trứng đầu tiên trong nhóm
+    	int splashX = grid1.getPosX(splashPos);
+    	int splashY = grid1.getPosY(splashPos);
+
+    	splashX += (GRID_UNIT - brokenegg.getWidth()) / 2;
+    	splashY += (GRID_UNIT - brokenegg.getHeight()) / 2;
+
+    	brokenegg.setXY(splashX, splashY);
+    	brokenegg.setVisible(true);
+    	brokenegg.invalidate();
+    	splashTimer = 0;
+        isSplashVisible = true;
+
         for (int i = 0; i < floodFillCount; i++)
         {
             vector2 pos = output[i];

@@ -12,6 +12,7 @@
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/widgets/Button.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 
 class Screen3ViewBase : public touchgfx::View<Screen3Presenter>
 {
@@ -33,6 +34,8 @@ protected:
     touchgfx::ButtonWithLabel buttonWithLabel1_1;
     touchgfx::Button button1;
     touchgfx::TextAreaWithOneWildcard ScoreText;
+    touchgfx::TextAreaWithOneWildcard ScoreText2;
+    touchgfx::TextArea textArea1;
 
 private:
 

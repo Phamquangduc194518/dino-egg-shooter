@@ -1,8 +1,9 @@
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/model/Model.cpp:4:1:Model::Model()	1
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/model/Model.cpp:9:6:void Model::tick()	1
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/model/Model.cpp:14:6:void Model::setLevel(int)	1
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/model/Model.cpp:19:6:void Model::setTime(int)	1
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/model/Model.cpp:24:6:void Model::setScore(int)	1
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/model/Model.cpp:29:5:int Model::getLevel()	1
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/model/Model.cpp:34:5:int Model::getTime()	1
-C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/model/Model.cpp:39:5:int Model::getScore()	1
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/model/Model.cpp:5:1:Model::Model()	1
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/model/Model.cpp:10:6:void Model::tick()	1
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/model/Model.cpp:15:6:void Model::setLevel(int)	1
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/model/Model.cpp:20:6:void Model::setTime(int)	1
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/model/Model.cpp:25:6:void Model::setScore(int)	2
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/model/Model.cpp:35:5:int Model::getLevel()	1
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/model/Model.cpp:40:5:int Model::getTime()	1
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/model/Model.cpp:45:5:int Model::getScore()	1
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/model/Model.cpp:50:5:int Model::getHighScore() const	1

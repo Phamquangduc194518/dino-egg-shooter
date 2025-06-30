@@ -6,6 +6,15 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_7WP2" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">-&#10;</Translation>
+      </Text>
+      <Text Id="__SingleUse_307N" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_B6U5" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
       <Text Id="__SingleUse_MAQT" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">0</Translation>
       </Text>

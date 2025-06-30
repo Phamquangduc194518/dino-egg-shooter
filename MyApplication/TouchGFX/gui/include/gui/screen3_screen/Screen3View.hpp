@@ -14,6 +14,7 @@ public:
     virtual void handleTickEvent();
     virtual void updateText();
     int score;
+    int highScore;
 protected:
 };
 

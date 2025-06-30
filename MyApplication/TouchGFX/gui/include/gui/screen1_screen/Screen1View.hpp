@@ -40,7 +40,11 @@ protected:
     grid grid1;
     gameLevel levelController;
     touchgfx::Image* currentShotImage;
-    eggPoolManager eggPool;     
+    eggPoolManager eggPool;
+    int score = 0;
+    int splashTimer;
+    bool isSplashVisible;
+    touchgfx::Image brokenegg;
 };
 
 #endif // SCREEN1VIEW_HPP

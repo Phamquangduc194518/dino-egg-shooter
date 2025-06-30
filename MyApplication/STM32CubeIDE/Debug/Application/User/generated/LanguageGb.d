@@ -1,5 +1,5 @@
 Application/User/generated/LanguageGb.o: \
- C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/generated/texts/src/LanguageGb.cpp \
+ C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/generated/texts/src/LanguageGb.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp

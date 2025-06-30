@@ -29,12 +29,25 @@ Screen3ViewBase::Screen3ViewBase() :
     button1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_SMALL_ROUND_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_SMALL_ROUND_PRESSED_ID));
     add(button1);
 
-    ScoreText.setPosition(33, 139, 175, 26);
+    ScoreText.setPosition(40, 137, 70, 30);
     ScoreText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     ScoreText.setLinespacing(0);
     ScoreText.setWildcard(touchgfx::TypedText(T___SINGLEUSE_MAQT).getText());
     ScoreText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_X5NZ));
     add(ScoreText);
+
+    ScoreText2.setPosition(131, 137, 70, 30);
+    ScoreText2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    ScoreText2.setLinespacing(0);
+    ScoreText2.setWildcard(touchgfx::TypedText(T___SINGLEUSE_307N).getText());
+    ScoreText2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_B6U5));
+    add(ScoreText2);
+
+    textArea1.setXY(111, 137);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_7WP2));
+    add(textArea1);
 }
 
 Screen3ViewBase::~Screen3ViewBase()

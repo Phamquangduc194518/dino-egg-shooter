@@ -1,5 +1,5 @@
 Application/User/gui/Screen4Presenter.o: \
- C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/gui/src/screen4_screen/Screen4Presenter.cpp \
+ C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen4_screen/Screen4Presenter.cpp \
  ../../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen4_screen/Screen4ViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

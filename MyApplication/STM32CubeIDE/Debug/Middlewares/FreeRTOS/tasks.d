@@ -1,5 +1,5 @@
 Middlewares/FreeRTOS/tasks.o: \
- C:/TouchGFXProjects/TouchGFXProjects/MyApplication/Middlewares/Third_Party/FreeRTOS/Source/tasks.c \
+ C:/TouchGFXProjects/dino-egg-shooter/MyApplication/Middlewares/Third_Party/FreeRTOS/Source/tasks.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \

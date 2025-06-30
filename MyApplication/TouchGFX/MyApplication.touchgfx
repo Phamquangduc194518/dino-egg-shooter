@@ -168,6 +168,16 @@
             "Wildcard2": {
               "TextId": "maxEgg"
             }
+          },
+          {
+            "Type": "Image",
+            "Name": "brokenegg",
+            "X": 35,
+            "Y": 24,
+            "Width": 40,
+            "Height": 40,
+            "Visible": false,
+            "RelativeFilename": "egg_broken.png"
           }
         ],
         "Interactions": []
@@ -220,15 +230,39 @@
           {
             "Type": "TextArea",
             "Name": "ScoreText",
-            "X": 33,
-            "Y": 139,
-            "Width": 175,
-            "Height": 26,
+            "X": 40,
+            "Y": 137,
+            "Width": 70,
+            "Height": 30,
             "TextId": "__SingleUse_X5NZ",
             "TextRotation": "0",
             "Wildcard1": {
               "TextId": "__SingleUse_MAQT"
             }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "ScoreText2",
+            "X": 131,
+            "Y": 137,
+            "Width": 70,
+            "Height": 30,
+            "TextId": "__SingleUse_B6U5",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_307N"
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 111,
+            "Y": 137,
+            "Width": 20,
+            "Height": 48,
+            "TextId": "__SingleUse_7WP2",
+            "TextRotation": "0",
+            "AutoSize": true
           }
         ],
         "Interactions": [

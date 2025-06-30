@@ -69,6 +69,11 @@ Screen1ViewBase::Screen1ViewBase()
     EggsCap.setWildcard2(touchgfx::TypedText(T_MAXEGG).getText());
     EggsCap.setTypedText(touchgfx::TypedText(T___SINGLEUSE_DNLZ));
     add(EggsCap);
+
+    brokenegg.setXY(35, 24);
+    brokenegg.setBitmap(touchgfx::Bitmap(BITMAP_EGG_BROKEN_ID));
+    brokenegg.setVisible(false);
+    add(brokenegg);
 }
 
 Screen1ViewBase::~Screen1ViewBase()

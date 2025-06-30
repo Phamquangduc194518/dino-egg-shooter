@@ -1,5 +1,5 @@
 Application/User/generated/FontCache.o: \
- C:/TouchGFXProjects/TouchGFXProjects/MyApplication/TouchGFX/generated/fonts/src/FontCache.cpp \
+ C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/generated/fonts/src/FontCache.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TextProvider.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \
