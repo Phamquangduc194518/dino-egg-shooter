@@ -69,9 +69,28 @@ void Screen1View::handleTickEvent()
 
 	if(time <=0|| eggNumber >= maxEggAllow)
 	{
-		time=0;
-		presenter->onLose(score);
-		static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen3ScreenNoTransition();
+		time = 0;
+		for (int y = 0; y < GRID_SIZE_Y; ++y) {
+		        for (int x = 0; x < GRID_SIZE_X; ++x) {
+		            vector2 pos(x, y);
+		            if (grid1.getGridValue(pos) != 0) {
+		                touchgfx::Image* egg = grid1.getGridReference(pos);
+		                if (egg) {
+		                    egg->setVisible(false);
+		                    egg->setAlpha(0);
+		                    egg->invalidate();
+		                    eggPool.returnEggToPool(egg);
+		                    remove(*egg);
+		                }
+		                grid1.setGridValue(pos, 0);
+		                grid1.setGridReference(pos, nullptr);
+		            }
+		        }
+		    }
+
+		    eggNumber = 0;
+		    presenter->onLose(score);
+		    static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen3ScreenNoTransition();
 	}
 	else if (eggNumber ==0)
 	{
@@ -400,6 +419,7 @@ float CalculateEggAngle(int tickCount)
 
 void Screen1View::loadLevel(int levelIndex)
 {
+	eggNumber = 0;
     level currentLevel = levelController.getLevel(levelIndex);
 
     for (int i = 0; i < 77; ++i)
@@ -417,6 +437,7 @@ void Screen1View::loadLevel(int levelIndex)
 
         }
     }
+    printf(">>> Loaded level %d, eggNumber = %d\n", levelIndex, eggNumber);
 }
 
 int Screen1Presenter::getLevel()

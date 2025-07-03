@@ -13,9 +13,9 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
 C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:63:6:virtual void Screen1View::tearDownScreen()	0	static
-C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:267:6:virtual void Screen1View::changeShotImage(uint8_t*)	16	static
-C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:401:6:virtual void Screen1View::loadLevel(int)	144	static
-C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:431:6:virtual void Screen1View::updateText(int, int, int)	24	static
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:286:6:virtual void Screen1View::changeShotImage(uint8_t*)	16	static
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:420:6:virtual void Screen1View::loadLevel(int)	144	static
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:452:6:virtual void Screen1View::updateText(int, int, int)	24	static
 ../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:14:13:Screen1View::~Screen1View()	8	static
 ../../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:14:13:virtual Screen1View::~Screen1View()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
@@ -23,12 +23,12 @@ C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_scre
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	8	static
 C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:19:1:Screen1View::Screen1View()	1552	static
-C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:361:7:float CalculateEggAngle(int)	8	static
-C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:422:5:virtual int Screen1Presenter::getLevel()	0	static
-C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:427:6:virtual void Screen1Presenter::onLose(int)	0	static
-C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:443:1:cpp)	16	static
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:380:7:float CalculateEggAngle(int)	8	static
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:443:5:virtual int Screen1Presenter::getLevel()	0	static
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:448:6:virtual void Screen1Presenter::onLose(int)	0	static
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:464:1:cpp)	16	static
 C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:46:6:virtual void Screen1View::setupScreen()	24	static
-C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:210:6:virtual void Screen1View::createNewImage(uint8_t)	24	static
-C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:238:6:virtual void Screen1View::createNewImage(uint8_t*)	24	static
-C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:287:6:virtual void Screen1View::handleCollision()	592	static
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:229:6:virtual void Screen1View::createNewImage(uint8_t)	24	static
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:257:6:virtual void Screen1View::createNewImage(uint8_t*)	24	static
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:306:6:virtual void Screen1View::handleCollision()	592	static
 C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen1_screen/Screen1View.cpp:67:6:virtual void Screen1View::handleTickEvent()	112	static

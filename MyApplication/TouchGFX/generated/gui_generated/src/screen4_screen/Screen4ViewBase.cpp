@@ -13,14 +13,15 @@ Screen4ViewBase::Screen4ViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    Level3.setXY(0, 43);
+    Level3.setXY(0, 80);
     Level3.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_PRESSED_ID));
     Level3.setLabelText(touchgfx::TypedText(T___SINGLEUSE_Z7WW));
     Level3.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     Level3.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    Level3.setAction(buttonCallback);
     add(Level3);
 
-    Level2.setXY(0, 135);
+    Level2.setXY(0, 160);
     Level2.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_PRESSED_ID));
     Level2.setLabelText(touchgfx::TypedText(T___SINGLEUSE_Y5MJ));
     Level2.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -28,7 +29,7 @@ Screen4ViewBase::Screen4ViewBase() :
     Level2.setAction(buttonCallback);
     add(Level2);
 
-    Level1.setXY(0, 220);
+    Level1.setXY(0, 241);
     Level1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_PRESSED_ID));
     Level1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_OVWB));
     Level1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
@@ -52,10 +53,14 @@ void Screen4ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
     if (&src == &Level1)
     {
         //Interaction1
-        //When Level1 clicked change screen to Screen1
-        //Go to Screen1 with no screen transition
-        application().gotoScreen1ScreenNoTransition();
+        //When Level1 clicked call virtual function
+        //Call onLevel1Clicked
+        onLevel1Clicked();
         //Interaction3
+        //When Level1 clicked call virtual function
+        //Call onLevel3Clicked
+        onLevel3Clicked();
+        //Interaction4
         //When Level1 clicked change screen to Screen1
         //Go to Screen1 with no screen transition
         application().gotoScreen1ScreenNoTransition();
@@ -63,7 +68,18 @@ void Screen4ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
     if (&src == &Level2)
     {
         //Interaction2
+        //When Level2 clicked call virtual function
+        //Call onLevel2Clicked
+        onLevel2Clicked();
+        //Interaction5
         //When Level2 clicked change screen to Screen1
+        //Go to Screen1 with no screen transition
+        application().gotoScreen1ScreenNoTransition();
+    }
+    if (&src == &Level3)
+    {
+        //Interaction6
+        //When Level3 clicked change screen to Screen1
         //Go to Screen1 with no screen transition
         application().gotoScreen1ScreenNoTransition();
     }

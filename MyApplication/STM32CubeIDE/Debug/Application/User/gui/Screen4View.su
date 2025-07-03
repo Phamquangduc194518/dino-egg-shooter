@@ -1,9 +1,12 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
 C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:17:6:virtual void Screen4View::tearDownScreen()	0	static
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:21:6:virtual void Screen4View::onLevel1Clicked()	8	static
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:26:6:virtual void Screen4View::onLevel2Clicked()	8	static
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:31:6:virtual void Screen4View::onLevel3Clicked()	8	static
 ../../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp:11:13:Screen4View::~Screen4View()	8	static
 ../../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp:11:13:virtual Screen4View::~Screen4View()	8	static
-C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:21:6:virtual void Screen4View::handleTickEvent()	24	static
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:36:6:virtual void Screen4View::handleTickEvent()	24	static
 C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:7:1:Screen4View::Screen4View()	8	static
-C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:35:6:virtual void Screen4Presenter::setLevel(int)	0	static
+C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:50:6:virtual void Screen4Presenter::setLevel(int)	0	static
 C:/TouchGFXProjects/dino-egg-shooter/MyApplication/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:12:6:virtual void Screen4View::setupScreen()	0	static

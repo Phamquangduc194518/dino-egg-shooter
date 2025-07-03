@@ -17,6 +17,22 @@ public:
     virtual ~Screen4ViewBase();
     virtual void setupScreen();
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void onLevel1Clicked()
+    {
+        // Override and implement this function in Screen4
+    }
+    virtual void onLevel2Clicked()
+    {
+        // Override and implement this function in Screen4
+    }
+    virtual void onLevel3Clicked()
+    {
+        // Override and implement this function in Screen4
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());

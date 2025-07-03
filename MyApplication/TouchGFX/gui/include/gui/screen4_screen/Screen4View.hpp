@@ -12,6 +12,9 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     virtual void handleTickEvent();
+    virtual void onLevel1Clicked();
+    virtual void onLevel2Clicked();
+    virtual void onLevel3Clicked();
 
 protected:
 };

@@ -15,8 +15,8 @@
           {
             "Type": "ButtonWithLabel",
             "Name": "buttonWithLabel1",
-            "X": 32,
-            "Y": 97,
+            "X": 33,
+            "Y": 263,
             "Width": 175,
             "Height": 50,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_pressed.png",
@@ -286,7 +286,7 @@
           {
             "Type": "ButtonWithLabel",
             "Name": "Level3",
-            "Y": 43,
+            "Y": 80,
             "Width": 240,
             "Height": 50,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
@@ -308,7 +308,7 @@
           {
             "Type": "ButtonWithLabel",
             "Name": "Level2",
-            "Y": 135,
+            "Y": 160,
             "Width": 240,
             "Height": 50,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
@@ -330,7 +330,7 @@
           {
             "Type": "ButtonWithLabel",
             "Name": "Level1",
-            "Y": 220,
+            "Y": 241,
             "Width": 240,
             "Height": 50,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
@@ -358,13 +358,46 @@
               "TriggerComponent": "Level1"
             },
             "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onLevel1Clicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Level2"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onLevel2Clicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Level1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "onLevel3Clicked"
+            }
+          },
+          {
+            "InteractionName": "Interaction4",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Level1"
+            },
+            "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "Screen1"
             }
           },
           {
-            "InteractionName": "Interaction2",
+            "InteractionName": "Interaction5",
             "Trigger": {
               "Type": "TriggerClicked",
               "TriggerComponent": "Level2"
@@ -376,10 +409,10 @@
             }
           },
           {
-            "InteractionName": "Interaction3",
+            "InteractionName": "Interaction6",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "Level1"
+              "TriggerComponent": "Level3"
             },
             "Action": {
               "Type": "ActionGotoScreen",

@@ -18,6 +18,21 @@ void Screen4View::tearDownScreen()
 {
     Screen4ViewBase::tearDownScreen();
 }
+void Screen4View::onLevel1Clicked()
+{
+    presenter->setLevel(0);
+    application().gotoScreen1ScreenNoTransition();
+}
+void Screen4View::onLevel2Clicked()
+{
+    presenter->setLevel(1);
+    application().gotoScreen1ScreenNoTransition();
+}
+void Screen4View::onLevel3Clicked()
+{
+    presenter->setLevel(2);
+    application().gotoScreen1ScreenNoTransition();
+}
 void Screen4View::handleTickEvent()
 {
 	Screen4ViewBase::handleTickEvent();
